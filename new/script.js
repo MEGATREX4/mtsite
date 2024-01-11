@@ -1,43 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const buttonContainer = document.getElementById("buttonContainer");
+var options = {
+    width: "100%",
+    height: "100%",
+    channel: "MEGATREX4",
+    muted: "true",
+    parent: ["embed.example.com", "othersite.example.com"]
+};
+var player = new Twitch.Player("SamplePlayerDivID", options);
+player.setVolume(0.1);
 
-    // Create a container for small buttons
-    const smallButtonContainer = document.createElement("div");
-    smallButtonContainer.classList.add("small-button-container");
+// Dynamically calculate size and location of SamplePlayerDivID
+var samplePlayerDiv = document.getElementById("SamplePlayerDivID");
+var rect = samplePlayerDiv.getBoundingClientRect();
 
-    // Fetch JSON data
-    fetch("data.json")
-        .then(response => response.json())
-        .then(data => {
-            // Loop through the data and create buttons
-            data.forEach(button => {
-                const buttonElement = document.createElement("a");
-                buttonElement.href = button.url;
+// Set overlay size and location based on SamplePlayerDivID
+var twitchOverlay = document.getElementById("TwitchOverlay");
+twitchOverlay.style.width = rect.width + "px";
+twitchOverlay.style.height = rect.height + 1 + "px";
+twitchOverlay.style.top = rect.top - 1 + "px";
+twitchOverlay.style.left = rect.left + "px";
 
-                // Check if the button is small
-                if (button.small) {
-                    // Add small button styling
-                    buttonElement.classList.add("small-button");
-
-                    // Set the background image for small buttons
-                    buttonElement.style.backgroundImage = `url('${button.icon}')`;
-
-                    // Append the small button to the small button container
-                    smallButtonContainer.appendChild(buttonElement);
-                } else {
-                    // Add regular button styling
-                    buttonElement.classList.add("regular-button");
-
-                    // Set the title as the caption for regular buttons
-                    buttonElement.textContent = button.title;
-
-                    // Append the button to the main container
-                    buttonContainer.appendChild(buttonElement);
-                }
-            });
-        })
-        .catch(error => console.error("Error fetching data:", error));
-
-    // Append the small button container to the main container outside the fetch block
-    buttonContainer.appendChild(smallButtonContainer);
+// Add click event listener to TwitchOverlay
+twitchOverlay.addEventListener("click", function() {
+    // Open the Twitch link
+    window.open("https://twitch.tv/MEGATREX4", "_blank");
 });

@@ -1,0 +1,38 @@
+@media (max-width: 768px) {
+    body{
+        margin: 0px!important;
+    }
+    .header {
+        margin: 0px;
+    }
+    .cont{
+        width: 390px!important;
+        
+    }
+    .image-container {
+        width: 180px!important;
+        height: 180px!important;
+    }
+    .headercont{
+        margin: 0px!important;
+    }
+    .block{
+        width: 330px;
+        height: 315px;
+    }
+
+    .arrows {
+        bottom: 100px!important;
+      }
+      .cont {
+        padding-top: 130px;
+        
+      }
+      .about{
+        transform: scale(90%);
+      }
+    
+}
+
+
+
