@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentIndex = 0;
     let currentCategory = 'all';
 
+
+
+
     function showModal(index) {
         modalContent.style.backgroundImage = images[index].style.backgroundImage;
         modal.style.display = 'block';
@@ -15,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
         modalContent.style.transform = 'scale(0.9)';
         setTimeout(() => {
             modalContent.style.transform = 'scale(1)';
+
+            document.body.style.overflow = 'hidden';
+            modalContent.addEventListener('wheel', handleWheel); // Enable wheel navigation
         }, 10);
     }
 
@@ -24,6 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // Reset the transform when hiding the modal
         modalContent.style.transform = 'scale(0.9)';
         document.body.classList.remove('gallery-open');
+
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+        modalContent.removeEventListener('wheel', handleWheel); // Disable wheel navigation
     }
 
     function handleBackButton() {
@@ -43,6 +52,30 @@ document.addEventListener('DOMContentLoaded', function () {
         showModal(categoryImages[currentIndex]);
     });
 
+    function handleWheel(event) {
+        const delta = event.deltaY;
+
+        // Check if the modal content is scrollable
+        const isScrollable = modalContent.scrollHeight > modalContent.clientHeight;
+
+        if (isScrollable) {
+            // If the modal content is scrollable, allow default behavior
+            return;
+        }
+
+        if (delta > 0) {
+            // Scroll down, move to the next image
+            currentIndex = (currentIndex + 1) % getVisibleImages().length;
+        } else if (delta < 0) {
+            // Scroll up, move to the previous image
+            currentIndex = (currentIndex - 1 + getVisibleImages().length) % getVisibleImages().length;
+        }
+
+        showModal(getVisibleImages()[currentIndex]);
+
+        // Prevent the default behavior of the wheel event
+        event.preventDefault();
+    }
     // Touch event handling for image click and swipe
     images.forEach((image, index) => {
         image.addEventListener('click', function (event) {
@@ -101,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         showModal(categoryImages[currentIndex]);
+
     });
 
     modal.addEventListener('click', function (event) {

@@ -1,7 +1,8 @@
 /* portfolio.css */
 
 .gallery {
-  margin-top: 15px; /* Adjust margin for smaller screens */
+  margin-top: 15px;
+  /* Adjust margin for smaller screens */
   position: relative;
 }
 
@@ -10,16 +11,29 @@
 
 }
 
+.imagecontcont {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+  min-height: 840px;
+  justify-content: center;
+  align-content: flex-start;
+}
+
 .image {
   width: 100%;
-  height: auto; /* Change height to auto for responsiveness */
-  background-size: cover; /* Use 'cover' to fill the dimensions of .image-container */
+  height: auto;
+  /* Change height to auto for responsiveness */
+  background-size: cover;
+  /* Use 'cover' to fill the dimensions of .image-container */
   background-repeat: no-repeat;
   background-position: center center;
   cursor: pointer;
   margin: 10px;
   border-radius: 15px;
-  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  transition: transform 0.3s ease;
+  /* Add transition for smooth scaling */
 }
 
 .image:hover {
@@ -41,8 +55,10 @@
   display: flex;
   gap: 10px;
   justify-content: center;
-  max-width: 100%;
+
+  width: 100%;
   flex-wrap: wrap;
+  min-height: 840px;
 }
 
 .modal {
@@ -56,12 +72,11 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.8);
-  overflow: hidden!important;
+  overflow: hidden !important;
   text-align: center;
 }
 
 .modal.open .arrows {
-
   width: 100%;
   display: flex;
   /* Show arrows when the modal is open */
@@ -69,9 +84,6 @@
   font-size: 24px;
   color: white;
   padding: 10px;
-
-
-  
 }
 
 .modal.open .arrows.hidden {
@@ -92,13 +104,14 @@
 }
 
 .modal-content {
-  width: 100vw;
+
   height: 100vh;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  transition: transform 0.3s ease; /* Add transition for smooth scaling in full-screen mode */
+  transition: transform 0.3s ease;
+  /* Add transition for smooth scaling in full-screen mode */
 }
 
 
@@ -144,6 +157,10 @@ body.gallery-open .arrows {
   padding: 10px;
 }
 
+.gallery-open{
+  overflow: hidden!important;
+}
+
 /* Add this rule to hide arrows in full-screen mode when the modal is open */
 body.gallery-open .arrows.hidden {
   display: none;
@@ -161,40 +178,42 @@ body.gallery-open .arrows.hidden {
 
 /* Style for tabs */
 .tabs {
-    display: flex;
-    margin: 30px 0;
+  display: flex;
+  margin: 30px 0;
 }
 
-.tab:hover{
+.tab:hover {
   background-color: #927f5a;
 }
 
 .tab {
-    padding: 13px;
-    cursor: pointer;
-    background-color: #6c5c3f;
-    margin-right: 10px;
-    color: #ffdea1;
-    border-radius: 10px;
+  padding: 13px;
+  cursor: pointer;
+  background-color: #6c5c3f;
+  margin-right: 10px;
+  color: #ffdea1;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 
 /* Style for selected tab */
 .tab.active {
-    background-color: #f7bd35;
-    color: white;
+  background-color: #f7bd35;
+  color: white;
 }
 
 /* Style for gallery items */
 .gallery {
-    margin-top: 10px;
-    position: relative;
+  margin-top: 10px;
+  position: relative;
 }
 
 /* Add specific styles for different categories if needed */
 .gallery[data-category="category1"] .image-container[data-category="category1"],
 .gallery[data-category="category2"] .image-container[data-category="category2"] {
-    /* Add specific styles for each category if needed */
-    /* For example, you can adjust the width or height */
-    width: 250px;
-    height: 250px;
+  /* Add specific styles for each category if needed */
+  /* For example, you can adjust the width or height */
+  width: 250px;
+  height: 250px;
 }

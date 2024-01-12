@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" , initial-scale=1.0">
+    <meta name="viewport" content=" initial-scale=1">
     <meta name="keywords"
         content="MEGATREX4, мегатрекс майнкрафт, мегатрекс стрімер, мегатрекс ютубер, нумограй, стрімер, ютубер, майнкрафт українською, майнкрафт, манйкрафт грати, майнкрафт сайт, MEGATREX4 майнкрафт, СУМ майнкрафт, Спільнота Українізації Модів, СУМ, СУМ грати, СУМ моди, СУМ переклад, СУМ користувачі, мегатрех,українською,мегатірекс,мегатірекс4,майнкрафт,Майнкрафт,Геймплей,Крафтинг,Виживання,Будівництво,канал мега,стріми українською,відео українською,ігри українською,записи стрімів,проходження ігор,майнкрафт виживання,майнкрафт українською,проходження україниською, MEGATREX4,twitch MEGATREX4,проходження ігор,українською,стрім українською,THE LONG DARK,зе лонг дарк,The long dark українською,стрім,the long dark MEGATREX4,зе лонг дарк MEGATREX4,зе лонг дарк мегатерекс,зе лонг дарк українською,megatrex4 запис стріму,twitch megatrex4,the long dark,long dark,revisiting long dark,long dark 2023,revisiting the long dark,the long dark game,the long dark review,is the long dark good,Історія одного героя THE LONG DARK, MEGATREX4,twitch MEGATREX4,проходження ігор,запис стрімів,MEGATREX4 запис стріму,MEGATREX4 запис стрімів,українською,стрім українською,Minecraft Live,StopMobVote,Minecraft,Minecraft VOte,Mob Vote,Minecraft live 2023,Minecraft live 2023 winner,Майнкрафт лайв,Майнкрафт лайв 2023,Майнкрафт лайв переможець,Голосування,Голосування за моба,Minecraft live 2023 як це було,megatrex4 запис стріму,megatrex4 запис стрімів,twitch megatrex4">
     <meta property="og:type" content="website" />
@@ -25,24 +25,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="smartphone.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./smartphone.css">
+    <link rel="stylesheet" href="./social.css">
+    <script src="https://kit.fontawesome.com/a0ff110df7.js" crossorigin="anonymous"></script>
+
 
 </head>
 
 <body>
-    <div class="header"><div class="headerpic"></div></div>
+    <div class="header">
+        <div class="headerpic"></div>
+    </div>
     <div class="headercont">
         <div class="about">
             <div class="aboutcont">
-                <div class="pages">
-                    <div class="pagesbtn pagesactive">Головна</div>
-                    <div class="pagesbtn" onclick="window.open('portfolio.html', '_self')">Портфоліо/Portfolio</div>
+                <div class="menucont">
+                    <div class="lang">
+                        <div class="uk" alt="обрати мову">🇺🇦</div>
+                        <div class="en" alt="обрати мову">🇬🇧</div>
+                    </div>
+                    <div class="pages">
+                        <div class="pagesbtn pagesactive">Головна</div>
+                        <div class="pagesbtn" onclick="window.open('portfolio.html', '_self')">Портфоліо</div>
+                    </div>
                 </div>
                 <div class="userpic"></div>
                 <div class="text">
@@ -64,8 +76,8 @@
                 </div>
             </div>
             <div class="logo">
-                <div class="Ylogo"></div>
-                <div class="Tlogo"></div>
+                <div class="Ylogo logoico"><i class="fa-brands fa-youtube"></i></div>
+                <div class="Tlogo logoico"><i class="fa-brands fa-twitch"></i></div>
             </div>
             <div class="block2">
                 <div class="video">
@@ -78,16 +90,20 @@
                     <div id="TwitchOverlay"></div>
                 </div>
             </div>
+            <div class="socialbtn">Telegram</div>
+            <div class="socialbtn">Twitter</div>
+            <div class="socialbtn">Tik-Tok</div>
         </div>
     </div>
     <div class="buttoncont">
 
     </div>
-
+    <footer class="footer"></footer>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://player.twitch.tv/js/embed/v1.js"></script>
-    <script src="script.js"></script>
-    <script src="youtube.js"></script>
+    <script src="./script.js"></script>
+    <script src="./youtube.js"></script>
+    <script rel="preconnect" type="module" src="./emoji.js"></script>
 </body>
 
 </html>

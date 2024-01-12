@@ -5,22 +5,32 @@ var options = {
     muted: "true",
     parent: ["embed.example.com", "othersite.example.com"]
 };
+
 var player = new Twitch.Player("SamplePlayerDivID", options);
 player.setVolume(0.1);
 
-// Dynamically calculate size and location of SamplePlayerDivID
-var samplePlayerDiv = document.getElementById("SamplePlayerDivID");
-var rect = samplePlayerDiv.getBoundingClientRect();
+// Function to update overlay size and location
+function updateOverlay() {
+    // Dynamically calculate size and location of SamplePlayerDivID
+    var samplePlayerDiv = document.getElementById("SamplePlayerDivID");
+    var rect = samplePlayerDiv.getBoundingClientRect();
 
-// Set overlay size and location based on SamplePlayerDivID
-var twitchOverlay = document.getElementById("TwitchOverlay");
-twitchOverlay.style.width = rect.width + "px";
-twitchOverlay.style.height = rect.height + 1 + "px";
-twitchOverlay.style.top = rect.top - 1 + "px";
-twitchOverlay.style.left = rect.left + "px";
+    // Set overlay size and location based on SamplePlayerDivID
+    var twitchOverlay = document.getElementById("TwitchOverlay");
+    twitchOverlay.style.width = rect.width + "px";
+    twitchOverlay.style.height = rect.height + 1 + "px";
+    twitchOverlay.style.top = rect.top - 1 + "px";
+    twitchOverlay.style.left = rect.left + "px";
+}
+
+// Initial call to set overlay size and location
+updateOverlay();
 
 // Add click event listener to TwitchOverlay
-twitchOverlay.addEventListener("click", function() {
+document.getElementById("TwitchOverlay").addEventListener("click", function() {
     // Open the Twitch link
     window.open("https://twitch.tv/MEGATREX4", "_blank");
 });
+
+// Add resize event listener to update overlay on window resize
+window.addEventListener("resize", updateOverlay);

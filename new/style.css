@@ -1,10 +1,16 @@
 /* style.css */
 
 
-
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+}
 
 html {
-    background-color: #1e1b16;
+    background-color: #29241c;
 
 }
 
@@ -17,9 +23,9 @@ html {
     justify-content: center;
 }
 
-.headerpic{
+.headerpic {
     background-image: url(https://i.imgur.com/GWCzTOm.png);
-    width: 90%;
+    width: 100%;
     height: 148px;
     border-radius: 0px 0px 30px 30px;
 
@@ -27,8 +33,9 @@ html {
 }
 
 .header {
-    margin: 0!important;
-    background-size: 100% 100%;  /* Adjusted background size */
+    margin: 0 !important;
+    background-size: 100% 100%;
+    /* Adjusted background size */
     position: absolute;
     z-index: -2;
     width: 100%;
@@ -40,18 +47,18 @@ html {
 }
 
 .about {
-    position: absolute;
-    top: calc(+50px);
-    padding: 15px;
-    max-width: 800px;
-    border-radius: 55px;
-    width: 430px;
-    height: 220px;
-    display: flex;
-    align-items: flex-start;
-    background: #FFDEA1;
-    box-shadow: 0px 30px 20px 0.01px rgba(0, 0, 0, 0.05);
-    flex-direction: column;
+    position: absolute!important;
+    top: calc(+50px)!important;
+    padding: 15px!important;
+    max-width: 800px!important;
+    border-radius: 55px!important;
+    width: 430px!important;
+    height: 220px!important;
+    display: flex!important;
+    align-items: flex-start!important;
+    background: #FFDEA1!important;
+    box-shadow: 0px 30px 20px 0.01px rgba(0, 0, 0, 0.05)!important;
+    flex-direction: column!important;
 }
 
 .aboutcont {
@@ -67,7 +74,7 @@ html {
     background-size: cover;
     border-radius: 25px;
     border: 10px solid #FFDEA1;
-    margin-right: 20px;
+
     /* Add some margin to separate the userpic from text */
 }
 
@@ -88,6 +95,8 @@ html {
 .colored {
     color: #f7bd35;
 }
+
+
 
 #TwitchOverlay {
     position: fixed;
@@ -130,7 +139,8 @@ h1 {
     width: 270px;
 }
 
-.flexdiv, .cont {
+.flexdiv,
+.cont {
     margin: 0px;
     display: flex;
     align-items: center;
@@ -240,7 +250,7 @@ h1 {
 .logo {
     display: flex;
     position: absolute;
-    top: calc(+455px)
+    top: calc(+450px)
 }
 
 .pages {
@@ -248,33 +258,32 @@ h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     display: flex;
-    position: absolute;
-    flex-direction: column;
     align-items: flex-start;
-    top: 40px;
-    left: 180px;
 }
 
 .pagesbtn {
     background-color: #6c5c3f;
-    width: 190px;
+    width: 100px;
     height: 50px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3px 0px;
+    margin: 3px 9px;
     box-shadow: 0px 0px 3.6px 2px rgba(0, 0, 0, 0.05);
     cursor: pointer;
+    transition: 0.3s ease;
+
 }
 
 .pagesbtn:hover {
+    transition: 0.3s ease;
     background-color: #927f5a;
 }
 
-.pagesactive{
-    background-color: #f7bd35!important;
-    color: white!important;
+.pagesactive {
+    background-color: #f7bd35 !important;
+    color: white !important;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -285,30 +294,130 @@ h1 {
 }
 
 .Ylogo {
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     margin: 0 75px;
-    background-image: url(https://i.imgur.com/4bjTT3u.png);
-    background-size: cover;
     z-index: 10;
 }
 
 .Tlogo {
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     margin: 0 75px;
-    background-image: url(https://i.imgur.com/ZFjXGle.png);
-    background-size: cover;
     z-index: 10;
+
 }
 
-header{
-    overflow: none!important;
+.logoico{
+    padding: 3px;
+    font-size: 30px;
+    display: flex;
+    color: #ffffff85;
+    background-color: #f7bd35;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%/20%;
+}
+header {
+
     margin: 0;
     padding: 0;
 }
 
 
-html{
-    overflow: none!important;
+
+
+
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #F7BD35 #1E1B16;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #1E1B16;
+}
+
+*::-webkit-scrollbar-track:hover {
+    background-color: #1E1B16;
+}
+
+*::-webkit-scrollbar-track:active {
+    background-color: #1E1B16;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #F7BD35;
+    border: 2px solid #1E1B16;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #E5AF31;
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: #FFB82B;
+}
+
+
+
+
+.footer {
+    position: absolute;
+    left:0;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 130px;
+    background-color: #000000;
+    margin-top: calc(60px);
+    /* Push the footer to the bottom of its container */
+    overflow-x: none;
+}
+
+img.emoji {
+    width: 1em;
+    pointer-events: none;
+}
+
+
+.lang {
+    display: flex;
+    top: 45px;
+    left: 180px;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.uk, .en {
+    font-size: 25px;
+    width: 40px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.menucont {
+    position: absolute;
+    top: 45px;
+    left: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.langt{
+    box-shadow: 0px 0px 16.6px 3px rgba(0, 0, 0, 0.25);
 }

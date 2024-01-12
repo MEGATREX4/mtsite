@@ -33,27 +33,38 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="smartphone.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./smartphone.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./portfolio.css">
 
-    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/a0ff110df7.js" crossorigin="anonymous"></script>
+    <script type="module" src="emoji.js"></script>
 
 </head>
 
 <body>
-    <div class="header"><div class="headerpic"></div></div>
+    <div class="header">
+        <div class="headerpic"></div>
+    </div>
     <div class="headercont">
         <div class="about">
             <div class="aboutcont">
-                <div class="pages">
-                    <div class="pagesbtn" onclick="window.open('index.html', '_self')">Main</div>
-                    <div class="pagesbtn pagesactive">Portfolio</div>
+                <div class="menucont">
+                    <div class="lang">
+                        <div class="uk" alt="обрати мову">🇺🇦</div>
+                        <div class="en" alt="обрати мову">🇬🇧</div>
+                    </div>
+                    <div class="pages">
+                        <div class="pagesbtn" onclick="window.open('index.html', '_self')">Головна</div>
+                        <div class="pagesbtn pagesactive">Портфоліо</div>
+                    </div>
                 </div>
                 <div class="userpic"></div>
                 <div class="text">
                     <h1>MEGATREX4</h1>
-                    <p class="aboutp">Streamer, amateur translator, blogger, 3D artist</p>
+                    <p class="aboutp">Стрімер, перекладач-аматор, блогер, 3д художник</p>
                 </div>
             </div>
         </div>
@@ -62,15 +73,16 @@
         <div class="cont">
             <div class="block">
                 <div class="blocktext">
-                    <p>Founder of the amateur translation community <span class="colored">"СУМ Майнкрафт"</span>, make
-                        entertainment content on <span class="colored">YouTube</span> and <span
+                    <p>Засновник аматорської перекладацької спільноти <span class="colored">"СУМ Майнкрафт"</span>,
+                        роблю
+                        розважальний контент на <span class="colored">YouTube</span> та <span
                             class="colored">Twitch</span>
                     </p>
                 </div>
             </div>
             <div class="tabs">
-                <div class="tab" data-category="all">All</div>
-                <div class="tab" data-category="category1">3d Moddels</div>
+                <div class="tab" data-category="all">Всі</div>
+                <div class="tab" data-category="category1">3D Моделі</div>
                 <div class="tab" data-category="category2">Category 2</div>
                 <!-- Add more tabs as needed -->
             </div>
@@ -120,13 +132,17 @@
                     </div>
                 </div>
                 <!-- Add more images as needed -->
+
+
             </div>
         </div>
 
     </div>
-    <script src="IMGzoom.js"></script>
-    <script src="gallery.js"></script>
 
+    <footer class="footer"></footer>
+    <script src="./IMGzoom.js"></script>
+    <script src="./gallery.js"></script>
+    <script rel="preconnect" src="./emoji.js"></script>
 </body>
 
 </html>
