@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             document.body.style.overflow = 'hidden';
             modalContent.addEventListener('wheel', handleWheel); // Enable wheel navigation
+            document.addEventListener('keydown', handleKeyboardArrows);
         }, 10);
     }
 
@@ -33,12 +34,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.body.style.overflow = 'auto'; // Re-enable scrolling
         modalContent.removeEventListener('wheel', handleWheel); // Disable wheel navigation
+        document.removeEventListener('keydown', handleKeyboardArrows);
     }
 
     function handleBackButton() {
         hideModal();
         window.removeEventListener('popstate', handleBackButton);
     }
+
+    function handleKeyboardArrows(event) {
+        if (modal.style.display === 'block') {
+            const categoryImages = getVisibleImages();
+            
+            if (event.key === 'ArrowRight' || event.key === 'a' || event.key === 'A') {
+                currentIndex = (currentIndex + 1) % categoryImages.length;
+            } else if (event.key === 'ArrowLeft' || event.key === 'd' || event.key === 'D') {
+                currentIndex = (currentIndex - 1 + categoryImages.length) % categoryImages.length;
+            }
+    
+            showModal(categoryImages[currentIndex]);
+        }
+    }
+    
+    
 
     document.querySelector('.next').addEventListener('click', function () {
         const categoryImages = getVisibleImages();

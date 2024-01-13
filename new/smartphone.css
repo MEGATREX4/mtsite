@@ -21,4 +21,15 @@
     .arrows {
         bottom: 100px !important;
     }
+    .footercont{
+        padding: 0 0;
+    }
+    .footerimage{
+        bottom: 0px;
+        width: 180px;
+        height: 180px;
+    }
+    .footertext {
+        font-size: 10px;
+    }
 }

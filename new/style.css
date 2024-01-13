@@ -10,7 +10,7 @@ html {
 }
 
 html {
-    background-color: #29241c;
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1094%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='rgba(29%2c 27%2c 30%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c579.374C132.675%2c582.193%2c282.681%2c684.748%2c389.173%2c605.564C497.375%2c525.109%2c431.768%2c345.289%2c482.71%2c220.446C530.499%2c103.331%2c686.497%2c28.864%2c675.929%2c-97.184C665.434%2c-222.355%2c520.746%2c-285.341%2c432.784%2c-375.01C350.933%2c-458.449%2c287.44%2c-564.94%2c177.675%2c-605.105C64.819%2c-646.401%2c-60.128%2c-631.328%2c-175.465%2c-597.577C-290.876%2c-563.805%2c-405.547%2c-510.066%2c-477.178%2c-413.477C-546.693%2c-319.741%2c-536.762%2c-194.933%2c-559.024%2c-80.376C-582.625%2c41.071%2c-643.998%2c159.948%2c-611.826%2c279.411C-577.52%2c406.795%2c-497.142%2c531.177%2c-378.689%2c589.251C-262.966%2c645.987%2c-128.854%2c576.636%2c0%2c579.374' fill='%23131214'%3e%3c/path%3e%3cpath d='M1920 1626.1100000000001C2020.182 1615.431 2073.234 1504.6779999999999 2156.045 1447.2939999999999 2235.003 1392.5810000000001 2351.838 1382.743 2395.031 1296.939 2438.321 1210.943 2393.478 1108.997 2373.782 1014.756 2355.2889999999998 926.2719999999999 2331.556 841.515 2283.806 764.76 2229.118 676.852 2169.262 589.9780000000001 2078.5190000000002 540.135 1975.08 483.31899999999996 1852.025 429.74300000000005 1739.68 465.88800000000003 1627.593 501.95000000000005 1565.378 620.363 1508.5810000000001 723.504 1460.07 811.598 1462.675 913.049 1439.5430000000001 1010.921 1413.603 1120.674 1320.011 1230.062 1364.35 1333.757 1408.56 1437.149 1549.721 1448.961 1649.234 1501.32 1739.001 1548.551 1819.137 1636.862 1920 1626.1100000000001' fill='%23272429'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1094'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
 
 }
 
@@ -47,18 +47,18 @@ html {
 }
 
 .about {
-    position: absolute!important;
-    top: calc(+50px)!important;
-    padding: 15px!important;
-    max-width: 800px!important;
-    border-radius: 55px!important;
-    width: 430px!important;
-    height: 220px!important;
-    display: flex!important;
-    align-items: flex-start!important;
-    background: #FFDEA1!important;
-    box-shadow: 0px 30px 20px 0.01px rgba(0, 0, 0, 0.05)!important;
-    flex-direction: column!important;
+    position: absolute !important;
+    top: calc(+50px) !important;
+    padding: 15px !important;
+    max-width: 800px !important;
+    border-radius: 55px !important;
+    width: 430px !important;
+    height: 220px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    background: #FFDEA1 !important;
+    box-shadow: 0px 30px 20px 0.01px rgba(0, 0, 0, 0.05) !important;
+    flex-direction: column !important;
 }
 
 .aboutcont {
@@ -99,7 +99,7 @@ html {
 
 
 #TwitchOverlay {
-    position: fixed;
+    position: absolute;
     background: transparent;
     pointer-events: auto;
     cursor: pointer;
@@ -283,14 +283,14 @@ h1 {
 
 .pagesactive {
     background-color: #f7bd35 !important;
-    color: white !important;
+    color: #6c5c3f !important;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 3px 0px;
     box-shadow: 0px 0px 3.6px 2px rgba(0, 0, 0, 0.05);
-    cursor: pointer;
+    cursor:default;
 }
 
 .Ylogo {
@@ -308,7 +308,7 @@ h1 {
 
 }
 
-.logoico{
+.logoico {
     padding: 3px;
     font-size: 30px;
     display: flex;
@@ -318,6 +318,7 @@ h1 {
     align-items: center;
     border-radius: 20%/20%;
 }
+
 header {
 
     margin: 0;
@@ -373,14 +374,18 @@ header {
 
 .footer {
     position: absolute;
-    left:0;
+    z-index: -2;
+    left: 0;
     border-radius: 20px 20px 0 0;
     width: 100%;
     height: 130px;
-    background-color: #000000;
+    background-color: #f7bd35;
     margin-top: calc(60px);
     /* Push the footer to the bottom of its container */
     overflow-x: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 img.emoji {
@@ -399,7 +404,8 @@ img.emoji {
     margin-right: 20px;
 }
 
-.uk, .en {
+.uk,
+.en {
     font-size: 25px;
     width: 40px;
     height: 25px;
@@ -418,6 +424,66 @@ img.emoji {
     align-items: center;
 }
 
-.langt{
+.langt {
     box-shadow: 0px 0px 16.6px 3px rgba(0, 0, 0, 0.25);
+}
+
+.footercont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 9%;
+}
+
+.footerimage{
+    background-image: url(./tempimage/rebder.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0px;
+    width: 180px;
+    height: 180px;
+}
+
+
+
+
+
+
+.footerright, .footermid, .footerleft {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerright{
+    width: 33%;
+    height: 100%;
+}
+
+.footermid {
+    height: 100%;
+    width: 33%;
+}
+
+.footerleft {
+    height: 100%;
+    width: 33%;
+}
+
+.footertext {
+    font-family: 'Roboto', sans-serif;
+    color: #402d006e;
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+}
+
+.footertext .emoji{
+    opacity: 50%;
+    font-size: 0.7em;
 }
