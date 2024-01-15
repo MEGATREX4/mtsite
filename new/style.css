@@ -252,6 +252,18 @@ h1 {
 
 }
 
+.video2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+iframe{
+    height: 100%;
+    width: 100%;
+}
+
 #SamplePlayerDivID {
     overflow: hidden;
     /* Ensure the border-radius is applied correctly */

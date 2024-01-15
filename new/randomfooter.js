@@ -2,11 +2,13 @@ document.addEventListener("DOMContentLoaded", function() {
     // List of image URLs
     var imageList = [
         "url('./tempimage/globe.png')",
-        // "url('./tempimage/chelik.webp')",
+        "url('./tempimage/shroomguy.png')",
         "url('./tempimage/table.png')",
         "url('./tempimage/bard.png')",
         "url('./tempimage/hat.png')",
         "url('./tempimage/hammer.png')",
+        "url('./tempimage/shroomgirl.png')",
+        "url('./tempimage/comp2.png')"
 
 
         // Add more image URLs as needed
