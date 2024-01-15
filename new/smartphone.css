@@ -7,15 +7,15 @@
         margin: 0px;
     }
 
-    .image-container {
-        width: 180px !important;
-        height: 180px !important;
-    }
 
     .headercont {
         margin: 0px !important;
     }
 
+    .socialbtn{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 
 
     .arrows {
@@ -32,4 +32,10 @@
     .footertext {
         font-size: 10px;
     }
+
+    .cont{
+        width: 100%!important;
+        margin: 0 50px;
+    }
+
 }

@@ -19,12 +19,21 @@ function updateOverlay() {
     var twitchOverlay = document.getElementById("TwitchOverlay");
     twitchOverlay.style.width = rect.width + "px";
     twitchOverlay.style.height = rect.height + 1 + "px";
-    twitchOverlay.style.top = rect.top - 1 + "px";
     twitchOverlay.style.left = rect.left + "px";
+
+    // Get the scroll position
+    var scrollPosition = window.scrollY || window.pageYOffset;
+
+    // Adjust the top position considering the scroll position
+    twitchOverlay.style.top = rect.top - 1 + scrollPosition + "px";
 }
+
+// Add scroll event listener to update overlay on scroll
+window.addEventListener("scroll", updateOverlay);
 
 // Initial call to set overlay size and location
 updateOverlay();
+
 
 // Add click event listener to TwitchOverlay
 document.getElementById("TwitchOverlay").addEventListener("click", function() {

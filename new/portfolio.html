@@ -33,7 +33,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet preconnect" href="./style.css">
     <link rel="stylesheet" href="./smartphone.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
@@ -101,9 +101,6 @@
                 </div>
                 <div class="imagecontcont">
                     <div class="image-container" data-category="category1">
-                        <div class="image" style="background-image: url('tempimage/rebder.png');"></div>
-                    </div>
-                    <div class="image-container" data-category="category1">
                         <div class="image" style="background-image: url('tempimage/render_phone1.png');"></div>
                     </div>
                     <div class="image-container" data-category="category1">
@@ -146,15 +143,17 @@
                     <p class="footertext">Використані матеріали:<br>Twemoji ❤️<br>Awesome icons 🫂</p>
                 </div>
                 <div class="footermid">
-                    <p class="footertext">Cтворено самотужки в Києві 🇺🇦<br>Авторські права належить MEGATREX4</p>
+                    <p class="footertext">Cтворено самотужки в Києві 🇺🇦<br>Copyright MEGATREX4<br>2023-2024 ©</p>
                 </div>
 
             <div class="footerright">
-                <div class="footerimage"></div>
+                <div id="footerimage" class="footerimage"></div>
             </div>
         </div>
-    </footer>    <script src="./IMGzoom.js"></script>
+    </footer>
+    <script src="./IMGzoom.js"></script>
     <script src="./gallery.js"></script>
+    <script rel="preconnect" src="randomfooter.js"></script>
     <script rel="preconnect" src="./emoji.js"></script>
 </body>
 
