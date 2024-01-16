@@ -1,0 +1,38 @@
+{
+    "galeryimages": [
+        {
+            "url": "/tempimage/render_phone1.png",
+            "category": "3dmodels",
+            "description":{
+                "desc": "Опис",
+                "descen": "Descrition",
+                "text": "Завантажити",
+                "texten": "Download",
+                "link": "https://curseforge.com"
+                }
+        },
+        {
+            "url": "/tempimage/render_phone2.png",
+            "category": "3dmodels",
+            "description":{
+                "desc": "description 1"
+            }
+        },
+        {
+            "url": "/tempimage/render2.png",
+            "category": "3dmodels"
+        },
+        {
+            "url": "https://cdn.modrinth.com/data/iFDbxIkI/cf8839864261c227074f2526a3692b03c6b1fccf.png",
+            "category": "mods",
+            "description":{
+                "desc": "Невеликий мод, який додає інструменти для бардів, предмети отримуються з різних видів",
+                "descen": "A small mod that adds tools for bards, items are obtained from different species",
+                "text": "Завантажити",
+                "texten": "Download",
+                "link": "https://modrinth.com/mod/bard-instruments"
+
+            }
+        }
+    ]
+}
