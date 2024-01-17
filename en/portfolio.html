@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -33,14 +33,14 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet preconnect" href="./style.css">
-    <link rel="stylesheet" href="./smartphone.css">
+    <link rel="stylesheet preconnect" href="/style.css">
+    <link rel="stylesheet" href="/smartphone.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./portfolio.css">
+    <link rel="stylesheet" href="/portfolio.css">
 
     <script src="https://kit.fontawesome.com/a0ff110df7.js" crossorigin="anonymous"></script>
-    <script type="module" src="emoji.js"></script>
+    <script type="module" src="/emoji.js"></script>
 
 </head>
 
@@ -53,12 +53,14 @@
             <div class="aboutcont">
                 <div class="menucont">
                     <div class="lang">
-                        <div class="uk" alt="обрати мову">🇺🇦</div>
-                        <div class="en" alt="обрати мову">🇬🇧</div>
+                        <div title="Сайт має функцію зміни мови. The site has a language change function." class="info">
+                        </div>
+                        <div class="uk" title="Змінити мову">🇺🇦</div>
+                        <div class="en" title="Змінити мову">🇬🇧</div>
                     </div>
                     <div class="pages">
-                        <div class="pagesbtn" onclick="window.open('index.html', '_self')">Головна</div>
-                        <div class="pagesbtn pagesactive">Портфоліо</div>
+                        <div class="pagesbtn" onclick="window.open('index.html', '_self')">Main</div>
+                        <div class="pagesbtn pagesactive">Portfolio</div>
                     </div>
                 </div>
                 <div class="userpic"></div>
@@ -81,7 +83,6 @@
                 <!-- they are added automatically using portfolio.js -->
             </div>
             <div class="gallery">
-
                 <div class="modal">
                     <span class="close">&times;</span>
                     <div class="modal-content">
@@ -104,6 +105,7 @@
                 <div id="galaryimage" class="imagecontcont">
                     <!-- JavaScript will dynamically populate this div -->
                 </div>
+
             </div>
         </div>
 
@@ -125,12 +127,13 @@
         </div>
     </footer>
     <script src="/changelang.js"></script>
-    <script src="portfolio.js"></script>
-    <script src="./IMGzoom.js"></script>
-    <script src="./gallery.js"></script>
-    <script rel="preconnect" src="./randomfooter.js"></script>
-    <script rel="preconnect" src="./emoji.js"></script>
-    <script rel="preconnect" src="./abouttext.js"></script>
+    <script rel="preconnect" src="/portfolio.js"></script>
+    <script src="/IMGzoom.js"></script>
+    <script src="/gallery.js"></script>
+    <script rel="preconnect" src="/randomfooter.js"></script>
+    <script rel="preconnect" src="/emoji.js"></script>
+    <script rel="preconnect" src="abouttext.js"></script>
+
 </body>
 
 </html>
