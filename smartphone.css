@@ -1,0 +1,41 @@
+@media (max-width: 768px) {
+    body {
+        margin: 0px !important;
+    }
+
+    .header {
+        margin: 0px;
+    }
+
+
+    .headercont {
+        margin: 0px !important;
+    }
+
+    .socialbtn{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+    .arrows {
+        bottom: 100px !important;
+    }
+    .footercont{
+        padding: 0 0;
+    }
+    .footerimage{
+        bottom: 0px;
+        width: 180px;
+        height: 180px;
+    }
+    .footertext {
+        font-size: 10px;
+    }
+
+    .cont{
+        width: 100%!important;
+        margin: 0 50px;
+    }
+
+}
