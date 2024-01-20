@@ -225,32 +225,35 @@ body.gallery-open .arrows.hidden {
 }
 
 
-.desccont{
+.desccont {
   display: flex;
   margin-bottom: 10px;
   width: 400px;
-  background-color: #f7bd35;
+  background-color: #ffdea1;
   height: 155px;
   flex-direction: row;
   padding: 5px;
   font-family: 'Roboto', sans-serif;
   position: relative;
   border-radius: 20px;
-  justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 }
 
-.desc{
-  width: auto;
-  font-size: 13px;
+.desc {
+  background-color: #ffdea1;
+  font-weight: 500;
+  color: #402d00;
+  width: 260px;
+  font-size: 16px;
   font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
   align-content: center;
   flex-direction: row;
-
-
+  align-items: center;
+  height: 135px;
+  border-radius: 15px;
+  padding: 10px;
 }
 
 .descbutton{

@@ -1,5 +1,8 @@
 /* style.css */
 
+.en, .uk{
+    cursor: pointer;
+    font-family: 'Noto Color Emoji', sans-serif;}
 
 body,
 html {

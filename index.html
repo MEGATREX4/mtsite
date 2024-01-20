@@ -41,7 +41,6 @@
     <title>MEGATREX4</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -53,6 +52,9 @@
     <script src="https://kit.fontawesome.com/a0ff110df7.js" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -71,8 +73,8 @@
                     <div class="lang">
                         <div title="Сайт має функцію зміни мови. The site has a language change function." class="info">
                         </div>
-                        <div class="uk" title="Змінити мову">🇺🇦</div>
-                        <div class="en" title="Змінити мову">🇬🇧</div>
+                        <div class="uk" title="Змінити мову"><i class="twa twa-flag-ukraine"></i></div>
+                        <div class="en" title="Змінити мову"><i class="twa twa-flag-united-kingdom"></i></div>
                     </div>
                     <div class="pages">
                         <div id="main" class="pagesbtn pagesactive">Головна</div>
@@ -97,10 +99,13 @@
             </div>
             <div class="logo">
                 <div class="Ylogo logoico">
+                    <div class="textarrow rightarrow"></div>
                     <div onclick="window.open('https://youtube.com/@MEGATREX4', '_blank')" title="Основний YouTube"
                         class="youtubeb"></div>
+
                 </div>
                 <div class="Tlogo logoico">
+                    <div class="textarrow leftarrow"></div>
                     <div onclick="window.open('https://twitch.tv/MEGATREX4', '_blank')" title="Twitch" class="twitchb">
                     </div>
                 </div>
@@ -176,29 +181,20 @@
             </div>
 
             <div class="smallbrandscont">
-                <div class="smallbrand">
-                    <div onclick="window.open('https://www.youtube.com/channel/UCM2RcPUTq2NhsRQRrrmPh9g', '_blank')"
-                        title="Youtube Shorts" id="Youtube_Shorts" id="socialbtn" class="small youtube"></div>
+                <div onclick="window.open('https://www.youtube.com/@streammegatrex4', '_blank')" class="smallbrand">
+                    <div title="Youtube Записи стрімів" id="youtube_rec" id="socialbtn" class="small youtubet"></div>
                 </div>
-                <div class="smallbrand">
-                    <div onclick="window.open('https://www.youtube.com/@streammegatrex4', '_blank')"
-                        title="Youtube Записи стрімів" id="youtube_rec" id="socialbtn" class="small youtubet"></div>
+                <div onclick="window.open('https://discord.gg/RBuQk37xr8', '_blank')" class="smallbrand">
+                    <div id="Discord" title="Discord" id="socialbtn" class="small discord"></div>
                 </div>
-                <div class="smallbrand">
-                    <div onclick="window.open('https://discord.gg/RBuQk37xr8', '_blank')" id="Discord" title="Discord"
-                        id="socialbtn" class="small discord"></div>
+                <div onclick="window.open('https://open.spotify.com/user/31a24fjgvnziasug6xwzxx5gmoqm', '_blank')" class="smallbrand">
+                    <div id="spotify" title="Spotify" id="socialbtn" class="small spotify"></div>
                 </div>
-                <div class="smallbrand">
-                    <div onclick="window.open('https://open.spotify.com/user/31a24fjgvnziasug6xwzxx5gmoqm', '_blank')"
-                        id="spotify" title="Spotify" id="socialbtn" class="small spotify"></div>
+                <div onclick="window.open('https://www.instagram.com/megatrex4/', '_blank')" class="smallbrand">
+                    <div id="Instagram" title="Instagram" id="socialbtn" class="small instagram"></div>
                 </div>
-                <div class="smallbrand">
-                    <div onclick="window.open('https://www.instagram.com/megatrex4/', '_blank')" id="Instagram"
-                        title="Instagram" id="socialbtn" class="small instagram"></div>
-                </div>
-                <div class="smallbrand">
-                    <div onclick="window.open('https://bsky.app/profile/megatrex4.bsky.social', '_blank')" id="bluesky"
-                        title="Bluesky" id="socialbtn" class="small bluesky"></div>
+                <div onclick="window.open('https://bsky.app/profile/megatrex4.bsky.social', '_blank')" class="smallbrand">
+                    <div id="bluesky" title="Bluesky" id="socialbtn" class="small bluesky"></div>
                 </div>
             </div>
 
@@ -226,10 +222,11 @@
     <script src="https://player.twitch.tv/js/embed/v1.js"></script>
     <script src="./script.js"></script>
     <script src="./youtube.js"></script>
-    <script rel="preconnect" type="module" src="./emoji.js"></script>
     <script src="./randomfooter.js"></script>
     <script rel="preconnect" src="./abouttext.js"></script>
     <script src="./status.js"></script>
+    <script rel="preconnect" type="module" src="/emoji.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SebastianAigner/twemoji-amazing/twemoji-amazing.css">
 </body>
 
 </html>

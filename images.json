@@ -2,21 +2,11 @@
     "galeryimages": [
         {
             "url": "/tempimage/render_phone1.png",
-            "category": "3dmodels",
-            "description":{
-                "desc": "Опис",
-                "descen": "Descrition",
-                "text": "Завантажити",
-                "texten": "Download",
-                "link": "https://curseforge.com"
-                }
+            "category": "3dmodels"
         },
         {
             "url": "/tempimage/render_phone2.png",
-            "category": "3dmodels",
-            "description":{
-                "desc": "description 1"
-            }
+            "category": "3dmodels"
         },
         {
             "url": "/tempimage/render2.png",
