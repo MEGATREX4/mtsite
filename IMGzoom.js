@@ -1,18 +1,8 @@
 document.addEventListener('DOMContentLoaded', async function () {
     const language = document.documentElement.lang.toLowerCase();
 
-    const TAB_NAMES = {
-        uk: {
-            '3dmodels': '3D Моделі',
-            'mods': 'Моди',
-            // Add more categories as needed
-        },
-        en: {
-            '3dmodels': '3D Models',
-            'mods': 'Mods',
-            // Add more categories as needed
-        },
-    };
+    const responsetab = await fetch('/tab_names.json');
+    const TAB_NAMES = await responsetab.json();
 
     // Load the images from the JSON file
     const response = await fetch('/images.json');
@@ -36,11 +26,21 @@ document.addEventListener('DOMContentLoaded', async function () {
         const imageContainer = document.createElement('div');
         imageContainer.classList.add('image-container');
         imageContainer.setAttribute('data-category', image.category);
-
+    
+        const categoryNameContainer = document.createElement('div');
+        categoryNameContainer.classList.add('category-name-container');
+    
+        const categoryDiv = document.createElement('div');
+        categoryDiv.classList.add('category-name');
+        categoryDiv.textContent = TAB_NAMES[language][image.category];
+    
+        categoryNameContainer.appendChild(categoryDiv);
+        imageContainer.appendChild(categoryNameContainer);
+    
         const imageElement = document.createElement('div');
         imageElement.classList.add('image');
         imageElement.style.backgroundImage = `url('${image.url}')`;
-
+    
         imageContainer.appendChild(imageElement);
         galleryContainer.appendChild(imageContainer);
     });
@@ -65,13 +65,13 @@ document.addEventListener('DOMContentLoaded', async function () {
             document.body.classList.add('gallery-open');
             currentCategory = document.querySelector('.tab.active').getAttribute('data-category');
 
-            modalContent.style.transform = 'scale(0.9)';
+            modalContent.style.transform = 'scale(0.7)';
             setTimeout(() => {
                 modalContent.style.transform = 'scale(1)';
                 document.body.style.overflow = 'hidden';
                 modalContent.addEventListener('wheel', handleWheel);
                 document.addEventListener('keydown', handleKeyboardArrows);
-            }, 10);
+            }, 50);
 
             // Update description
             updateDescription(index);
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     function hideModal() {
         modal.style.display = 'none';
         document.body.classList.remove('gallery-open');
-        modalContent.style.transform = 'scale(0.9)';
+        modalContent.style.transform = 'scale(0.7)';
         document.body.classList.remove('gallery-open');
         document.body.style.overflow = 'auto';
         modalContent.removeEventListener('wheel', handleWheel);
@@ -274,13 +274,15 @@ document.addEventListener('DOMContentLoaded', async function () {
             if (imageData.description.text && imageData.description.link) {
                 const buttonElement = document.createElement('div');
                 buttonElement.classList.add('buttondesc');
-
+    
                 // Use language-specific button text if available, default to the general one
                 const buttonText = language === 'en' ? (imageData.description.texten || imageData.description.text) : imageData.description.text;
-                buttonElement.innerHTML = `<div onclick="window.open('${imageData.description.link}', '_blank')"> ${buttonText}</div>`;
-
+                
+                // Add the onclick attribute to open the link in a new tab
+                buttonElement.innerHTML = `<div class="buttonlink" onclick="window.open('${imageData.description.link}', '_blank')"> ${buttonText}</div>`;
+    
                 descButtonContainer.appendChild(buttonElement);
-
+    
                 // Show the descButtonContainer element if there are buttons
                 descButtonContainer.style.display = 'flex';
             } else {
@@ -288,16 +290,16 @@ document.addEventListener('DOMContentLoaded', async function () {
                 descButtonContainer.style.display = 'none';
             }
 
-            // Show the #desccont element if there is a description
-            document.getElementById('desccont').style.display = 'flex';
-        } else {
-            // Hide the descButtonContainer element if no description
-            descButtonContainer.style.display = 'none';
-
-            // Hide the #desccont element if there is no description
-            document.getElementById('desccont').style.display = 'none';
+                // Show the #desccont element if there is a description
+                document.getElementById('desccont').style.display = 'flex';
+            } else {
+                // Hide the descButtonContainer element if no description
+                descButtonContainer.style.display = 'none';
+            
+                // Hide the #desccont element if there is no description
+                document.getElementById('desccont').style.display = 'none';
+            }
         }
-    }
 
 
 
@@ -308,7 +310,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         imageData.description.buttons.forEach(button => {
             const buttonElement = document.createElement('div');
             buttonElement.classList.add('buttondesc');
-            buttonElement.innerHTML = `<div onclick="window.open('${imageData.description.link}', '_blank')"> ${imageData.description.text}</div>`;
+            buttonElement.innerHTML = `<div class="buttonlink" onclick="window.open('${imageData.description.link}', '_blank')"> ${imageData.description.text}</div>`;
 
             descButtonContainer.appendChild(buttonElement);
         });
