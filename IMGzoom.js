@@ -1,8 +1,9 @@
+//imgzoom.js
 document.addEventListener('DOMContentLoaded', async function () {
     const language = document.documentElement.lang.toLowerCase();
 
-    const responsetab = await fetch('/tab_names.json');
-    const TAB_NAMES = await responsetab.json();
+    const responseTab = await fetch('/tab_names.json');
+    const TAB_NAMES = await responseTab.json();
 
     // Load the images from the JSON file
     const response = await fetch('/images.json');
@@ -255,21 +256,21 @@ document.addEventListener('DOMContentLoaded', async function () {
         // Clear previous description and buttons
         descContainer.innerHTML = '';
         descButtonContainer.innerHTML = '';
-
+    
         // Get the corresponding image data
         const imageData = galeryimages[index];
         const language = document.documentElement.lang.toLowerCase();
-
+    
         // Check if there is a description
         if (imageData.description && imageData.description.desc) {
             const descText = document.createElement('p');
             descText.classList.add('desctext');
-
+    
             // Use language-specific description if available, default to the general one
             descText.textContent = language === 'en' ? (imageData.description.descen || imageData.description.desc) : imageData.description.desc;
-
+    
             descContainer.appendChild(descText);
-
+    
             // Check if there are buttons
             if (imageData.description.text && imageData.description.link) {
                 const buttonElement = document.createElement('div');
@@ -277,7 +278,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     
                 // Use language-specific button text if available, default to the general one
                 const buttonText = language === 'en' ? (imageData.description.texten || imageData.description.text) : imageData.description.text;
-                
+    
                 // Add the onclick attribute to open the link in a new tab
                 buttonElement.innerHTML = `<div class="buttonlink" onclick="window.open('${imageData.description.link}', '_blank')"> ${buttonText}</div>`;
     
@@ -289,17 +290,17 @@ document.addEventListener('DOMContentLoaded', async function () {
                 // Hide the descButtonContainer element if no buttons
                 descButtonContainer.style.display = 'none';
             }
-
-                // Show the #desccont element if there is a description
-                document.getElementById('desccont').style.display = 'flex';
-            } else {
-                // Hide the descButtonContainer element if no description
-                descButtonContainer.style.display = 'none';
-            
-                // Hide the #desccont element if there is no description
-                document.getElementById('desccont').style.display = 'none';
-            }
+    
+            // Show the #desccont element if there is a description
+            document.getElementById('desccont').style.display = 'flex';
+        } else {
+            // Hide the descButtonContainer element if no description
+            descButtonContainer.style.display = 'none';
+    
+            // Hide the #desccont element if there is no description
+            document.getElementById('desccont').style.display = 'none';
         }
+    }
 
 
 
@@ -310,11 +311,9 @@ document.addEventListener('DOMContentLoaded', async function () {
         imageData.description.buttons.forEach(button => {
             const buttonElement = document.createElement('div');
             buttonElement.classList.add('buttondesc');
-            buttonElement.innerHTML = `<div class="buttonlink" onclick="window.open('${imageData.description.link}', '_blank')"> ${imageData.description.text}</div>`;
+            buttonElement.innerHTML = `<div class="buttonlink" onclick="window.open('${button.link}', '_blank')"> ${button.text}</div>`;
 
             descButtonContainer.appendChild(buttonElement);
         });
     }
-
-}
-);
+});

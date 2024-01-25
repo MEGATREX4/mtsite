@@ -6,20 +6,22 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.tab[data-category="all"]').classList.add('active');
 
     tabs.addEventListener('click', function (event) {
-        if (event.target.classList.contains('tab')) {
-            const selectedTab = event.target;
+        const selectedTab = event.target;
+        if (selectedTab.classList.contains('tab')) {
             const category = selectedTab.getAttribute('data-category');
 
             if (currentCategory !== category) { // Check if it's a different category
-                document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-                selectedTab.classList.add('active');
-
+                setActiveTab(selectedTab);
                 currentCategory = category;
-
                 filterGallery(category);
             }
         }
     });
+
+    function setActiveTab(tab) {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+    }
 
     function filterGallery(category) {
         const imageContainers = document.querySelectorAll('.image-container');
@@ -28,11 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const containerCategory = container.getAttribute('data-category');
             const shouldShow = category === 'all' || category === containerCategory;
 
-            if (shouldShow) {
-                container.style.display = 'flex';
-            } else {
-                container.style.display = 'none';
-            }
+            container.style.display = shouldShow ? 'flex' : 'none';
         });
     }
 });

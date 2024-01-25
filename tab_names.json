@@ -1,11 +1,12 @@
 {
     "uk": {
-      "3dmodels": "3D Models",
-      "mods": "Mods"
+        "3dmodels": "3D Моделі",
+        "mods": "Моди",
+        "projects": "Проєкти"
     },
     "en": {
-      "3dmodels": "3D Model",
-      "mods": "Mods"
+        "3dmodels": "3D Model",
+        "mods": "Mods",
+        "projects": "projects"
     }
-  }
-  
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask JSON App</title>
+    <!-- Add the link to your stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="contcont">
+    <div class="cont">
+        <div class="leftdiv">
+            <h2>Add New Categories</h2>
+            <!-- Form for adding new categories -->
+            <form action="/add_category" method="post">
+                <label for="category">New Category Name (in English):</label>
+                <input type="text" id="category" name="category" required>
+                
+                <label for="title">Category Display Title (in English):</label>
+                <input type="text" id="title" name="title" required>
+        
+                <label for="uk_name">New Category Name (in Ukrainian):</label>
+                <input type="text" id="uk_name" name="uk_name" required>
+                
+                <label for="uk_title">Category Display Title (in Ukrainian):</label>
+                <input type="text" id="uk_title" name="uk_title" required>
+        
+                <button type="submit">Add Category</button>
+            </form>
+        </div>
+        <div class="rightdiv">
+            <h2>Add New Elements</h2>
+            {% for element in images_data['galeryimages'] %}
+            {% if element['category'] == selected_category %}
+                {% if 'description' in element %}
+                    <p>{{ element['description']['descen'] }}</p>
+                    <!-- Add more details as needed -->
+                    <a href="{{ element['description']['link'] }}" target="_blank">{{ element['description']['texten'] }}</a>
+                    {% if 'button' in element %}
+                        <p>{{ element['button'] }}</p>
+                    {% endif %}
+                {% else %}
+                    <p>Element has no 'description' attribute</p>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+<!-- Form for adding new images -->
+<form action="/add_image" method="post">
+    <!-- Add a hidden input field to store the selected category -->
+    <input type="hidden" name="selected_category" value="{{ selected_category }}">
+    
+    <!-- Category selection dropdown -->
+    <label for="category">Category:</label>
+    <select id="category" name="category" required>
+        <!-- Add options dynamically based on available categories -->
+        {% for key, value in tab_names['en'].items() %}
+            <option value="{{ key }}">{{ value }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="image">Image URL:</label>
+    <input type="url" id="image" name="image" required>
+
+    <!-- New fields for description -->
+    <label for="desc">Description:</label>
+    <input type="text" id="desc" name="desc">
+    <label for="descen">English Description:</label>
+    <input type="text" id="descen" name="descen">
+    <label for="text">Text:</label>
+    <input type="text" id="text" name="text">
+    <label for="texten">English Text:</label>
+    <input type="text" id="texten" name="texten">
+    <label for="link">Link:</label>
+    <input type="url" id="link" name="link">
+    <button type="submit">Add Image</button>
+</form>
+
+<script>
+    // JavaScript to toggle the required attribute based on the description fields
+    document.getElementById('desc').addEventListener('input', toggleRequired);
+    document.getElementById('descen').addEventListener('input', toggleRequired);
+    document.getElementById('text').addEventListener('input', toggleRequired);
+    document.getElementById('texten').addEventListener('input', toggleRequired);
+    document.getElementById('link').addEventListener('input', toggleRequired);
+
+    function toggleRequired() {
+        const descNotEmpty = document.getElementById('desc').value.trim();
+        const descenNotEmpty = document.getElementById('descen').value.trim();
+        const textNotEmpty = document.getElementById('text').value.trim();
+        const textenNotEmpty = document.getElementById('texten').value.trim();
+        const linkNotEmpty = document.getElementById('link').value.trim();
+
+        // Toggle the 'required' attribute based on whether there is something in the description fields
+        document.getElementById('descen').required = descNotEmpty;
+
+        // Make "Text" and "English Text" required only when the "Link" field is not empty
+        document.getElementById('text').required = linkNotEmpty;
+        document.getElementById('texten').required = linkNotEmpty;
+
+        // Make "Link" required only when there is something in the "Text" or "English Text" fields
+        document.getElementById('link').required = textNotEmpty || textenNotEmpty;
+    }
+</script>
+</div>
+    </div>
+    <h3>Всі категорії</h3>
+    <div class="catcreate">
+        
+        {% for key, value in tab_names['uk'].items() %}
+        <div class="createtab">{{ tab_names['en'][key] }}</div>
+        <div class="createtab">{{ tab_names['uk'][key] }}</div>
+    {% endfor %}
+    </div>
+    <h3>Всі Елементи</h3>
+    <div class="cards">
+        {% for element in images_data['galeryimages'] %}
+            <div class="card">
+                <div class="basicinfo">
+                    <div class="imagecont">
+                        <div class="image" alt="Image" style="background-image: url({{ element['url'] }});"></div>
+                    </div>
+                <div class="tabcont">
+                    <div class="tabcont">
+                        <div class="tab">
+                            {% if element['category'] in tab_names['uk'] %}
+                                {{ tab_names['uk'][element['category']] }}
+                            {% endif %}
+                        </div>
+                        <div class="tab">
+                            {% if element['category'] in tab_names['en'] %}
+                                {{ tab_names['en'][element['category']] }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="card-info">
+                    {% if 'description' in element %}
+                        <div class="desccont">
+                        <div class="desc">{{ element['description']['descen'] }}</div>
+                        <div class="desc">{{ element['description']['desc'] }}</div>
+                    </div>
+                        <div class="buttoncont">
+                        <a class="button" href="{{ element['description']['link'] }}" target="_blank">{{ element['description']['texten'] }}</a>
+                        <a class="button" href="{{ element['description']['link'] }}" target="_blank">{{ element['description']['text'] }}</a>
+                    </div>
+                        {% if 'button' in element %}
+                            <p>{{ element['button'] }}</p>
+                        {% endif %}
+                    {% else %}
+                        <p>У елемента немає поля 'опису'</p>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+</div>
+</div>
+</body>
+</html>

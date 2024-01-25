@@ -1,3 +1,4 @@
+//loading.js
 document.addEventListener('DOMContentLoaded', function () {
     // Get the loading animation element
     var loadingAnimation = document.getElementById('loading-animation');

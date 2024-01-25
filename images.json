@@ -35,13 +35,12 @@
         {
             "url": "https://cdn.modrinth.com/data/iFDbxIkI/cf8839864261c227074f2526a3692b03c6b1fccf.png",
             "category": "mods",
-            "description":{
+            "description": {
                 "desc": "Невеликий мод, який додає інструменти для бардів, предмети можна отримати в подорожах до кінця світу.",
                 "descen": "A small mod that adds tools for bards, items can be obtained in travels to the end of the world.",
                 "text": "Завантажити",
                 "texten": "Download",
                 "link": "https://modrinth.com/mod/bard-instruments"
-
             }
         }
     ]
