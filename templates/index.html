@@ -10,6 +10,14 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
+<script>
+    // Check if the page is opened through Python (http://192.168.0.114)
+    if (!window.location.origin.includes('http://192.168.0.114')) {
+        // Redirect to the specified URL
+        window.location.href = 'https://megatrex4.netlify.app/';
+    }
+</script>
+
 <body>
     <div class="contcont">
     <div class="cont">
