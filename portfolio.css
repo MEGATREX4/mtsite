@@ -48,7 +48,7 @@
   height: 200px;
   display: flex;
   transition: opacity 0.5s;
-  background-color: #6c5c3f4f;
+  background-color: #0000004f;
   border-radius: 15px;
   box-shadow: 0px 0px 3.6px 2px rgba(0, 0, 0, 0.05);
 }
@@ -317,6 +317,6 @@ body.gallery-open .arrows.hidden {
   border-radius: 6px;
   width: 120px;
   padding: 5px;
-  background-color: #6c5c3f96;
+  background-color: #443d2f96;
   color:#ffdea1;
 }
