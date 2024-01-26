@@ -187,7 +187,12 @@ body.gallery-open .arrows.hidden {
 /* Style for tabs */
 .tabs {
   display: flex;
-  margin: 30px 0;
+  margin: 30px;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 640px;
 }
 
 .tab:hover {
@@ -195,6 +200,7 @@ body.gallery-open .arrows.hidden {
 }
 
 .tab {
+  margin: 3px 0;
   padding: 13px;
   cursor: pointer;
   background-color: #6c5c3f;

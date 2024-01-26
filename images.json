@@ -1,15 +1,7 @@
 {
     "galeryimages": [
         {
-            "url": "https://i.imgur.com/mPX1ucW.png",
-            "category": "3dmodels"
-        },
-        {
-            "url": "https://i.imgur.com/Qx7tEll.png",
-            "category": "3dmodels"
-        },
-        {
-            "url": "https://i.imgur.com/qEpN4Id.png",
+            "url": "https://i.imgur.com/KGy5smy.png",
             "category": "3dmodels"
         },
         {
@@ -17,19 +9,7 @@
             "category": "3dmodels"
         },
         {
-            "url": "https://i.imgur.com/D0NntWB.png",
-            "category": "3dmodels"
-        },
-        {
-            "url": "https://i.imgur.com/FUpyy2V.png",
-            "category": "3dmodels"
-        },
-        {
             "url": "https://i.imgur.com/MnmGcPm.png",
-            "category": "3dmodels"
-        },
-        {
-            "url": "https://i.imgur.com/vPVTsS2.png",
             "category": "3dmodels"
         },
         {
@@ -49,10 +29,6 @@
         },
         {
             "url": "https://i.imgur.com/wGbvEX1.png",
-            "category": "3dmodels"
-        },
-        {
-            "url": "https://i.imgur.com/KGy5smy.png",
             "category": "3dmodels"
         },
         {
@@ -87,7 +63,7 @@
             }
         },
         {
-            "url": "https://cdn.modrinth.com/data/bbtIbKAp/631084141cfc0b39451fe3ced6bed07c5449cbc1.webp",
+            "url": "https://cdn.modrinth.com/data/bbtIbKAp/219d768adc110e19818d80301036b2c88c1d734e.png",
             "category": "resourcepack",
             "description": {
                 "desc": "UA Translation Волонтерський проєкт по перекладу модів майнкрафт",
@@ -95,6 +71,50 @@
                 "text": "Завантажити",
                 "texten": "Download",
                 "link": "https://modrinth.com/resourcepack/ua-translation"
+            }
+        },
+        {
+            "url": "https://i.imgur.com/G1wtzaO.jpeg",
+            "category": "3dmodels",
+            "description": {
+                "desc": "Склянка пива. Зроблено за запитом з твіттера",
+                "descen": "A glass of beer. Made on request from Twitter.",
+                "text": "Переглянути",
+                "texten": "View",
+                "link": "https://twitter.com/nuzhnov_v/status/1750151883644195115"
+            }
+        },
+        {
+            "url": "https://cdn.modrinth.com/data/HMEQ4bdT/ced969d5a0ca4eadee2032de3d5f3b104102bfed.png",
+            "category": "modpack",
+            "description": {
+                "desc": "Інноваційний квест технічно-пригодницька збірка для майнкрафту",
+                "descen": "Innovate Quest tech-adventure minecraft modpack",
+                "text": "Завантажити",
+                "texten": "Download",
+                "link": "https://modrinth.com/modpack/innovate-quest"
+            }
+        },
+        {
+            "url": "https://cdn.modrinth.com/data/NC9qhgQt/d36db38a12e177857c79fad7281eddaa88da70be.png",
+            "category": "modpack",
+            "description": {
+                "desc": "MT Optimization Модпак, що додає максимальну оптимізацію гри без втрати якості",
+                "descen": "MT Optimization A modpack that adds maximum game optimization without losing quality",
+                "text": "Завантажити",
+                "texten": "Download",
+                "link": "https://modrinth.com/modpack/mt-optimization"
+            }
+        },
+        {
+            "url": "https://i.imgur.com/jBKl5fO.png",
+            "category": "projects",
+            "description": {
+                "desc": "Волонтерська перекладацька спільнота, що перекладає з англійської на українську",
+                "descen": "Volunteer translation community that translates from English into Ukrainian",
+                "text": "Переглянути сайт",
+                "texten": "View website",
+                "link": "https://sumtranslate.netlify.app/"
             }
         }
     ]

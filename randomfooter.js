@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
         "url(https://i.imgur.com/eXkOnsg.png)",
         "url(https://i.imgur.com/VlyQ3pV.png)",
         "url(https://i.imgur.com/batTDxx.png)",
-        "url(https://i.imgur.com/nKI5jUX.png)"
+        "url(https://i.imgur.com/nKI5jUX.png)",
+        "url(https://i.imgur.com/Tq8wqfV.png)"
 
 
         // Add more image URLs as needed
