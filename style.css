@@ -539,3 +539,8 @@ img.emoji {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+
+.desctext{
+    padding: 20px;
+}

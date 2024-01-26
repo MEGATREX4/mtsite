@@ -2,11 +2,13 @@
     "uk": {
         "3dmodels": "3D Моделі",
         "mods": "Моди",
-        "projects": "Проєкти"
+        "projects": "Проєкти",
+        "resourcepack": "Ресурс паки"
     },
     "en": {
         "3dmodels": "3D Model",
         "mods": "Mods",
-        "projects": "projects"
+        "projects": "projects",
+        "resourcepack": "Resourse packs"
     }
 }

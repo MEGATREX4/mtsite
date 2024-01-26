@@ -9,7 +9,9 @@
     <!-- Add the link to your stylesheet -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" type="image/x-icon" href="https://i.imgur.com/Cw1AbQd.png">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <script>
@@ -27,19 +29,19 @@
             <h2>Add New Categories</h2>
             <!-- Form for adding new categories -->
             <form action="/add_category" method="post">
-                <label for="category">New Category Name (in English):</label>
+                <label for="category">New Category Name (EN):</label>
                 <input type="text" id="category" name="category" required>
                 
-                <label for="title">Category Display Title (in English):</label>
+                <label for="title">Category Display Title (EN):</label>
                 <input type="text" id="title" name="title" required>
         
-                <label for="uk_name">New Category Name (in Ukrainian):</label>
+                <label for="uk_name">New Category Name (UK):</label>
                 <input type="text" id="uk_name" name="uk_name" required>
                 
-                <label for="uk_title">Category Display Title (in Ukrainian):</label>
+                <label for="uk_title">Category Display Title (UK):</label>
                 <input type="text" id="uk_title" name="uk_title" required>
         
-                <button type="submit">Add Category</button>
+                <button class="" type="submit">Add Category</button>
             </form>
         </div>
         <div class="rightdiv">
@@ -67,24 +69,73 @@
     <label for="category">Category:</label>
     <select id="category" name="category" required>
         <!-- Add options dynamically based on available categories -->
-        {% for key, value in tab_names['en'].items() %}
+        {% for key, value in tab_names['uk'].items() %}
             <option value="{{ key }}">{{ value }}</option>
         {% endfor %}
     </select>
 
     <label for="image">Image URL:</label>
-    <input type="url" id="image" name="image" required>
+    <div class="image-preview-cont">
+        <div id="image-preview" class="image-preview"></div>
+    </div>
+    <input type="url" id="image" name="image" required oninput="updateImagePreview(this.value)">
+    
+
+    <script>
+        function updateImagePreview(url) {
+            const imagePreview = document.getElementById('image-preview');
+            const imageInput = document.getElementById('image');
+    
+            // Update the background image of the preview div
+            imagePreview.style.backgroundImage = `url('${url}')`;
+    
+            // Show or hide the preview based on whether the URL is empty
+            if (url.trim() !== '' && imageInput === document.activeElement) {
+                imagePreview.style.display = 'flex';
+            } else {
+                imagePreview.style.display = 'none';
+            }
+        }
+    
+        document.getElementById('image').addEventListener('mouseenter', function () {
+        const url = this.value.trim();
+        if (url !== '') {
+            showImagePreview(url);
+        }
+    });
+
+    // Add an event listener for mouse leave to hide the preview container
+    document.getElementById('image').addEventListener('mouseleave', function () {
+        hideImagePreview();
+    });
+
+    // Function to show the image preview
+    function showImagePreview(url) {
+        const previewCont = document.querySelector('.image-preview-cont');
+        const preview = document.getElementById('image-preview');
+        preview.style.backgroundImage = `url('${url}')`;
+        previewCont.style.display = 'flex';
+    }
+
+    // Function to hide the image preview container
+    function hideImagePreview() {
+        const previewCont = document.querySelector('.image-preview-cont');
+        previewCont.style.display = 'none';
+    }
+    </script>
+    
+
 
     <!-- New fields for description -->
-    <label for="desc">Description:</label>
+    <label for="desc">Description (UK):</label>
     <input type="text" id="desc" name="desc">
-    <label for="descen">English Description:</label>
+    <label for="descen">Description (EN):</label>
     <input type="text" id="descen" name="descen">
-    <label for="text">Text:</label>
+    <label for="text">Button text (UK):</label>
     <input type="text" id="text" name="text">
-    <label for="texten">English Text:</label>
+    <label for="texten">Button text (EN):</label>
     <input type="text" id="texten" name="texten">
-    <label for="link">Link:</label>
+    <label for="link">URL LINK:</label>
     <input type="url" id="link" name="link">
     <button type="submit">Add Image</button>
 </form>

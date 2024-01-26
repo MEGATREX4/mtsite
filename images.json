@@ -42,6 +42,60 @@
                 "texten": "Download",
                 "link": "https://modrinth.com/mod/bard-instruments"
             }
+        },
+        {
+            "url": "https://i.imgur.com/h68yMHW.png",
+            "category": "3dmodels"
+        },
+        {
+            "url": "https://i.imgur.com/wGbvEX1.png",
+            "category": "3dmodels"
+        },
+        {
+            "url": "https://i.imgur.com/KGy5smy.png",
+            "category": "3dmodels"
+        },
+        {
+            "url": "https://i.imgur.com/Zofg76B.png",
+            "category": "3dmodels"
+        },
+        {
+            "url": "https://i.imgur.com/eXkOnsg.png",
+            "category": "3dmodels"
+        },
+        {
+            "url": "https://i.imgur.com/VlyQ3pV.png",
+            "category": "3dmodels"
+        },
+        {
+            "url": "https://i.imgur.com/batTDxx.png",
+            "category": "3dmodels"
+        },
+        {
+            "url": "https://i.imgur.com/nKI5jUX.png",
+            "category": "3dmodels"
+        },
+        {
+            "url": "https://cdn.modrinth.com/data/JjNsIkUt/dd65cfbae83a60174690d47c586f16c42978e287.png",
+            "category": "resourcepack",
+            "description": {
+                "desc": "Created Applied Energistics Змінює блоки та предмети AE2 на подібні до Create",
+                "descen": "Created Applied Energistics Changing AE2 blocks and items to Created-like",
+                "text": "Завантажити",
+                "texten": "Download",
+                "link": "https://modrinth.com/resourcepack/created-applied-energistics"
+            }
+        },
+        {
+            "url": "https://cdn.modrinth.com/data/bbtIbKAp/631084141cfc0b39451fe3ced6bed07c5449cbc1.webp",
+            "category": "resourcepack",
+            "description": {
+                "desc": "UA Translation Волонтерський проєкт по перекладу модів майнкрафт",
+                "descen": "UA Translation A volunteer project to translate Minecraft mods",
+                "text": "Завантажити",
+                "texten": "Download",
+                "link": "https://modrinth.com/resourcepack/ua-translation"
+            }
         }
     ]
 }
