@@ -116,6 +116,28 @@
                 "texten": "View website",
                 "link": "https://sumtranslate.netlify.app/"
             }
+        },
+        {
+            "url": "https://i.imgur.com/JDlYlpK.png",
+            "category": "3dmodels",
+            "description": {
+                "desc": "Міксер. Зроблено за запитом з твіттера",
+                "descen": "Mixer. Made by request from Twitter",
+                "text": "Переглянути",
+                "texten": "View",
+                "link": "https://twitter.com/kogda_ya_zdohnu/status/1750150994229354570"
+            }
+        },
+        {
+            "url": "https://i.imgur.com/Q367aH9.png",
+            "category": "3dmodels",
+            "description": {
+                "desc": "Міксер. Зроблено за запитом з твіттера",
+                "descen": "Mixer. Made by request from Twitter",
+                "text": "Переглянути",
+                "texten": "View",
+                "link": "https://twitter.com/kogda_ya_zdohnu/status/1750150994229354570"
+            }
         }
     ]
 }
