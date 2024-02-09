@@ -149,6 +149,17 @@
                 "texten": "View",
                 "link": "https://twitter.com/GoslingUA/status/1751664629762126158"
             }
+        },
+        {
+            "url": "https://cdn.modrinth.com/data/4MNT9XQ6/d3f23ebd92dd306e4d4c0e7c24cb730f0bd0dbab.png",
+            "category": "mods",
+            "description": {
+                "desc": "Невеликий ванільний мод, який додає кілька кольорових молотків",
+                "descen": "Little vanilla-like mod that adds some colored hammers",
+                "text": "Завантажити",
+                "texten": "Download",
+                "link": "https://modrinth.com/mod/mt-hammer"
+            }
         }
     ]
 }
