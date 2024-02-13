@@ -3,7 +3,6 @@ import json
 
 app = Flask(__name__)
 
-
 # Load data from JSON files
 def load_data():
     with open('tab_names.json', 'r', encoding='utf-8') as f:
@@ -21,6 +20,13 @@ def save_data(tab_names, images_data):
 
     with open('images.json', 'w', encoding='utf-8') as f:
         json.dump(images_data, f, ensure_ascii=False, indent=4)
+
+# Get the next available ID for the new element
+def get_next_id(images_data):
+    if 'galeryimages' in images_data:
+        return max(image.get('id', 0) for image in images_data['galeryimages']) + 1
+    else:
+        return 1
 
 # Index route
 @app.route('/')
@@ -49,8 +55,6 @@ def add_category():
 
     return redirect('/')
 
-# Add this to your 'add_image' route in the Flask app
-
 # Add image route
 @app.route('/add_image', methods=['POST'])
 def add_image():
@@ -58,6 +62,7 @@ def add_image():
     selected_category = request.form.get('selected_category').strip()  # Trim whitespace
 
     element = {
+        "id": get_next_id(images_data),
         "url": request.form.get('image'),
         "category": request.form.get('category'),
     }
@@ -91,17 +96,11 @@ def add_image():
 
     return redirect('/')
 
-
-
-
 # Add this route to your Flask app
 @app.route('/display_elements')
 def display_elements():
     tab_names, images_data = load_data()
     return render_template('display_elements.html', tab_names=tab_names, images_data=images_data)
 
-
-
-
 if __name__ == '__main__':
-    app.run(debug=True, host='192.168.0.116')
+    app.run(debug=True, host='192.168.0.110')

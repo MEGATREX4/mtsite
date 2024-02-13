@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const response = await fetch('/images.json');
     const jsonData = await response.json();
     const galeryimages = jsonData.galeryimages;
+    galeryimages.sort((a, b) => a.id - b.id);
 
     const galleryContainer = document.getElementById('galaryimage');
     const tabsContainer = document.getElementById('category');
@@ -60,12 +61,19 @@ document.addEventListener('DOMContentLoaded', async function () {
     let currentCategory = 'all';
 
     function showModal(index) {
-        if (images[index]) {
+        // uncomment for debug 👇
+        // console.log(`Виклик модального вікна: index: ${index}, ID: ${galeryimages[index].id}, category: ${galeryimages[index].category}`);
+    
+        const categoryImages = getVisibleImages();
+        if (categoryImages.includes(index)) {
+            // Reset currentIndex to the provided index when modal is displayed
+            currentIndex = categoryImages.indexOf(index);
+    
             modalContent.style.backgroundImage = images[index].style.backgroundImage;
             modal.style.display = 'block';
             document.body.classList.add('gallery-open');
             currentCategory = document.querySelector('.tab.active').getAttribute('data-category');
-
+    
             modalContent.style.transform = 'scale(0.7)';
             setTimeout(() => {
                 modalContent.style.transform = 'scale(1)';
@@ -73,7 +81,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 modalContent.addEventListener('wheel', handleWheel);
                 document.addEventListener('keydown', handleKeyboardArrows);
             }, 50);
-
+    
             // Update description
             updateDescription(index);
         }
@@ -94,18 +102,50 @@ document.addEventListener('DOMContentLoaded', async function () {
         window.removeEventListener('popstate', handleBackButton);
     }
 
+
+
+
     function handleKeyboardArrows(event) {
         if (modal.style.display === 'block') {
             const categoryImages = getVisibleImages();
+            const totalImages = categoryImages.length;
+    
             if (event.key === 'ArrowRight' || event.key === 'a' || event.key === 'A') {
-                currentIndex = (currentIndex + 1) % categoryImages.length;
+                currentIndex = (currentIndex + 1) % totalImages;
             } else if (event.key === 'ArrowLeft' || event.key === 'd' || event.key === 'D') {
-                currentIndex = (currentIndex - 1 + categoryImages.length) % categoryImages.length;
+                currentIndex = (currentIndex - 1 + totalImages) % totalImages;
             }
-            if (categoryImages[currentIndex] !== undefined) {
-                showModal(categoryImages[currentIndex]);
+    
+            if (currentIndex < 0) {
+                currentIndex = totalImages - 1;
+            }
+    
+            showModal(categoryImages[currentIndex]);
+        }
+    }
+    // Function to find the next image with an ID larger than the currently open one
+    function findNextImageId(currentIndex) {
+        const currentId = categoryImages[getVisibleImages()[currentIndex]].id;
+        let nextIndex;
+    
+        for (let i = currentIndex + 1; i < categoryImages.length; i++) {
+            if (categoryImages[i].id > currentId) {
+                nextIndex = i;
+                break;
             }
         }
+    
+        // If no next image is found, wrap around to the first image
+        if (nextIndex === undefined) {
+            for (let i = 0; i < currentIndex; i++) {
+                if (categoryImages[i].id > currentId) {
+                    nextIndex = i;
+                    break;
+                }
+            }
+        }
+    
+        return nextIndex;
     }
 
     document.querySelector('.next').addEventListener('click', function () {
@@ -127,19 +167,74 @@ document.addEventListener('DOMContentLoaded', async function () {
     function handleWheel(event) {
         const delta = event.deltaY;
         const isScrollable = modalContent.scrollHeight > modalContent.clientHeight;
-
+    
         if (isScrollable) {
             return;
         }
-
+    
+        const categoryImages = getVisibleImages();
+        const totalImages = categoryImages.length;
+    
         if (delta > 0) {
-            currentIndex = (currentIndex + 1) % getVisibleImages().length;
+            currentIndex = (currentIndex + 1) % totalImages;
         } else if (delta < 0) {
-            currentIndex = (currentIndex - 1 + getVisibleImages().length) % getVisibleImages().length;
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
         }
-
-        showModal(getVisibleImages()[currentIndex]);
+    
+        if (currentIndex < 0) {
+            currentIndex = totalImages - 1;
+        }
+    
+        showModal(categoryImages[currentIndex]);
         event.preventDefault();
+    }
+    
+    // Add the function to find the next image with an ID larger than the currently open one
+    function findNextImageId(currentIndex, currentIndexId) {
+        let nextIndex = currentIndex;
+    
+        for (let i = currentIndex + 1; i < galeryimages.length; i++) {
+            if (galeryimages[i].id > currentIndexId) {
+                nextIndex = i;
+                break;
+            }
+        }
+    
+        // If no next image is found, wrap around to the first image
+        if (nextIndex === currentIndex) {
+            for (let i = 0; i < currentIndex; i++) {
+                if (galeryimages[i].id > currentIndexId) {
+                    nextIndex = i;
+                    break;
+                }
+            }
+        }
+    
+        return nextIndex;
+    }
+    
+    // Add a function to find the previous image with an ID smaller than the currently open one
+    function findPreviousImageId(currentIndex, currentIndexId) {
+        let previousIndex = currentIndex;
+    
+        for (let i = currentIndex - 1; i >= 0; i--) {
+            if (galeryimages[i].id < currentIndexId) {
+                previousIndex = i;
+                break;
+            }
+        }
+    
+        // If no previous image is found, wrap around to the last image
+        if (previousIndex === currentIndex) {
+            for (let i = galeryimages.length - 1; i > currentIndex; i--) {
+                if (galeryimages[i].id < currentIndexId) {
+                    previousIndex = i;
+                    break;
+                }
+            }
+        }
+    
+        return previousIndex;
     }
 
     images.forEach((image, index) => {
@@ -218,10 +313,11 @@ document.addEventListener('DOMContentLoaded', async function () {
     document.querySelector('.tabs').addEventListener('click', function (event) {
         if (event.target.classList.contains('tab')) {
             currentCategory = event.target.getAttribute('data-category');
-            currentIndex = 0;
+            currentIndex = 0; // Update currentIndex to show the first image in the new category
             filterImages();
         }
     });
+    
 
     function filterImages() {
         images.forEach((image, index) => {
@@ -232,9 +328,11 @@ document.addEventListener('DOMContentLoaded', async function () {
                 image.closest('.image-container').style.display = 'none';
             }
         });
+    
         // Update description when changing categories
-        updateDescription(getVisibleImages()[0]);
+        updateDescription(visibleImages[currentIndex]);
     }
+    
 
     function getVisibleImages() {
         const visibleImages = [];
@@ -246,6 +344,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         });
         return visibleImages;
     }
+    
 
     function isSwipe(startX, endX, threshold = 50) {
         return Math.abs(endX - startX) > threshold;
@@ -312,7 +411,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             const buttonElement = document.createElement('div');
             buttonElement.classList.add('buttondesc');
             buttonElement.innerHTML = `<div class="buttonlink" onclick="window.open('${button.link}', '_blank')"> ${button.text}</div>`;
-
+    
             descButtonContainer.appendChild(buttonElement);
         });
     }

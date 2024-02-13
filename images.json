@@ -1,18 +1,22 @@
 {
     "galeryimages": [
         {
+            "id": 1,
             "url": "https://i.imgur.com/KGy5smy.png",
             "category": "3dmodels"
         },
         {
+            "id": 2,
             "url": "https://i.imgur.com/HwI2aGd.png",
             "category": "3dmodels"
         },
         {
+            "id": 3,
             "url": "https://i.imgur.com/MnmGcPm.png",
             "category": "3dmodels"
         },
         {
+            "id": 4,
             "url": "https://cdn.modrinth.com/data/iFDbxIkI/cf8839864261c227074f2526a3692b03c6b1fccf.png",
             "category": "mods",
             "description": {
@@ -24,34 +28,42 @@
             }
         },
         {
+            "id": 5,
             "url": "https://i.imgur.com/h68yMHW.png",
             "category": "3dmodels"
         },
         {
+            "id": 6,
             "url": "https://i.imgur.com/wGbvEX1.png",
             "category": "3dmodels"
         },
         {
+            "id": 7,
             "url": "https://i.imgur.com/Zofg76B.png",
             "category": "3dmodels"
         },
         {
+            "id": 8,
             "url": "https://i.imgur.com/eXkOnsg.png",
             "category": "3dmodels"
         },
         {
+            "id": 9,
             "url": "https://i.imgur.com/VlyQ3pV.png",
             "category": "3dmodels"
         },
         {
+            "id": 10,
             "url": "https://i.imgur.com/batTDxx.png",
             "category": "3dmodels"
         },
         {
+            "id": 11,
             "url": "https://i.imgur.com/nKI5jUX.png",
             "category": "3dmodels"
         },
         {
+            "id": 12,
             "url": "https://cdn.modrinth.com/data/JjNsIkUt/dd65cfbae83a60174690d47c586f16c42978e287.png",
             "category": "resourcepack",
             "description": {
@@ -63,6 +75,7 @@
             }
         },
         {
+            "id": 13,
             "url": "https://cdn.modrinth.com/data/bbtIbKAp/219d768adc110e19818d80301036b2c88c1d734e.png",
             "category": "resourcepack",
             "description": {
@@ -74,6 +87,7 @@
             }
         },
         {
+            "id": 14,
             "url": "https://i.imgur.com/G1wtzaO.jpeg",
             "category": "3dmodels",
             "description": {
@@ -85,6 +99,7 @@
             }
         },
         {
+            "id": 15,
             "url": "https://cdn.modrinth.com/data/HMEQ4bdT/ced969d5a0ca4eadee2032de3d5f3b104102bfed.png",
             "category": "modpack",
             "description": {
@@ -96,6 +111,7 @@
             }
         },
         {
+            "id": 16,
             "url": "https://cdn.modrinth.com/data/NC9qhgQt/d36db38a12e177857c79fad7281eddaa88da70be.png",
             "category": "modpack",
             "description": {
@@ -107,6 +123,7 @@
             }
         },
         {
+            "id": 17,
             "url": "https://i.imgur.com/jBKl5fO.png",
             "category": "projects",
             "description": {
@@ -118,6 +135,7 @@
             }
         },
         {
+            "id": 18,
             "url": "https://i.imgur.com/JDlYlpK.png",
             "category": "3dmodels",
             "description": {
@@ -129,6 +147,7 @@
             }
         },
         {
+            "id": 19,
             "url": "https://i.imgur.com/Q367aH9.png",
             "category": "3dmodels",
             "description": {
@@ -140,6 +159,7 @@
             }
         },
         {
+            "id": 20,
             "url": "https://i.imgur.com/Q6H2fuE.png",
             "category": "3dmodels",
             "description": {
@@ -151,6 +171,7 @@
             }
         },
         {
+            "id": "0",
             "url": "https://cdn.modrinth.com/data/4MNT9XQ6/d3f23ebd92dd306e4d4c0e7c24cb730f0bd0dbab.png",
             "category": "mods",
             "description": {
