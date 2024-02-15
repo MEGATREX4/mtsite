@@ -4,13 +4,15 @@
         "mods": "Моди",
         "projects": "Проєкти",
         "resourcepack": "Ресурс паки",
-        "modpack": "Збірки модів"
+        "modpack": "Збірки модів",
+        "article": "Статті"
     },
     "en": {
         "3dmodels": "3D Model",
         "mods": "Mods",
         "projects": "Projects",
         "resourcepack": "Resourse packs",
-        "modpack": "Modpacks"
+        "modpack": "Modpacks",
+        "article": "Articles"
     }
 }

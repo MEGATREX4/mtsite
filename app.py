@@ -24,7 +24,8 @@ def save_data(tab_names, images_data):
 # Get the next available ID for the new element
 def get_next_id(images_data):
     if 'galeryimages' in images_data:
-        return max(image.get('id', 0) for image in images_data['galeryimages']) + 1
+        existing_ids = [int(image.get('id', 0)) for image in images_data['galeryimages'] if image.get('id') is not None]
+        return max(existing_ids, default=0) + 1
     else:
         return 1
 
@@ -61,10 +62,15 @@ def add_image():
     tab_names, images_data = load_data()
     selected_category = request.form.get('selected_category').strip()  # Trim whitespace
 
+    # Get the next available ID for the new element
+    next_id = get_next_id(images_data)
+
+    # Create the element with the necessary attributes
     element = {
-        "id": get_next_id(images_data),
+        "id": next_id,
         "url": request.form.get('image'),
         "category": request.form.get('category'),
+        "showen": request.form.get('not_show_in_english_ver') != 'on',  # True if not checked, False if checked
     }
 
     # Ensure the selected category is not empty
@@ -103,4 +109,4 @@ def display_elements():
     return render_template('display_elements.html', tab_names=tab_names, images_data=images_data)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='192.168.0.110')
+    app.run(debug=True, host='192.168.0.108')

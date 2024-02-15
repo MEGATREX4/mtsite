@@ -1,7 +1,7 @@
 {
     "galeryimages": [
         {
-            "id": 1,
+            "id": 21,
             "url": "https://i.imgur.com/KGy5smy.png",
             "category": "3dmodels"
         },
@@ -180,6 +180,45 @@
                 "text": "Завантажити",
                 "texten": "Download",
                 "link": "https://modrinth.com/mod/mt-hammer"
+            }
+        },
+        {
+            "showen": true,
+            "id": "1",
+            "url": "https://cdn.drukarnia.com.ua/645d261fc149c83ef73d7fc1/images/articles/65ccc339ca7a99f8303ba652/IUng296235.76389261766.webp",
+            "category": "article",
+            "description": {
+                "desc": "Смайлики є важливим інструментом взаємодії між стрімером та глядачами, а якщо ці смайлики ще й смішні — то це крутіше у 2 рази.",
+                "descen": "Emotes are an important tool for interaction between streamers and viewers, and if they're also funny, it's 2 times cooler.",
+                "text": "Читати",
+                "texten": "Read",
+                "link": "https://megatrex4.netlify.app/tag/#7tv"
+            }
+        },
+        {
+            "showen": true,
+            "id": 22,
+            "url": "https://cdn.drukarnia.com.ua/645d261fc149c83ef73d7fc1/images/articles/65cbfb23ca7a99f8303a68cd/aXCX128088.50164480857.webp",
+            "category": "3dmodels",
+            "description": {
+                "desc": "Як налаштувати другу доріжку в OBS для Twich",
+                "descen": "How to set up a second track in OBS for Twich",
+                "text": "Читати",
+                "texten": "Read",
+                "link": "https://megatrex4.netlify.app/tag/#OBS2Track"
+            }
+        },
+        {
+            "showen": true,
+            "id": 23,
+            "url": "https://cdn.drukarnia.com.ua/645d261fc149c83ef73d7fc1/images/articles/6527d74c3513c63578726f5a/KXTp195489.2143362812.webp",
+            "category": "3dmodels",
+            "description": {
+                "desc": "Голосування в Minecraft: чи варто зупиняти?",
+                "descen": "Voting in Minecraft: should it be stopped?",
+                "text": "Читати",
+                "texten": "Read",
+                "link": "https://drukarnia.com.ua/articles/golosuvannya-v-minecraft-chi-varto-zupinyati-7M8KD"
             }
         }
     ]

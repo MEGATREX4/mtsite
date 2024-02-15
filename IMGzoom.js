@@ -25,28 +25,38 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
     galeryimages.forEach(image => {
-        const imageContainer = document.createElement('div');
-        imageContainer.classList.add('image-container');
-        imageContainer.setAttribute('data-category', image.category);
+        // Check if the element should be displayed based on language and page
+        const shouldDisplay = image.showen !== true && window.location.pathname == '/en/portfolio.html';
     
-        const categoryNameContainer = document.createElement('div');
-        categoryNameContainer.classList.add('category-name-container');
-    
-        const categoryDiv = document.createElement('div');
-        categoryDiv.classList.add('category-name');
-        categoryDiv.textContent = TAB_NAMES[language][image.category];
-    
-        categoryNameContainer.appendChild(categoryDiv);
-        imageContainer.appendChild(categoryNameContainer);
-    
-        const imageElement = document.createElement('div');
-        imageElement.classList.add('image');
-        imageElement.style.backgroundImage = `url('${image.url}')`;
-    
-        imageContainer.appendChild(imageElement);
-        galleryContainer.appendChild(imageContainer);
+        if (shouldDisplay) {
+            const imageContainer = document.createElement('div');
+            imageContainer.classList.add('image-container');
+            imageContainer.setAttribute('data-category', image.category);
+        
+            const categoryNameContainer = document.createElement('div');
+            categoryNameContainer.classList.add('category-name-container');
+        
+            const categoryDiv = document.createElement('div');
+            categoryDiv.classList.add('category-name');
+            categoryDiv.textContent = TAB_NAMES[language][image.category];
+        
+            categoryNameContainer.appendChild(categoryDiv);
+            imageContainer.appendChild(categoryNameContainer);
+        
+            const imageElement = document.createElement('div');
+            imageElement.classList.add('image');
+            imageElement.style.backgroundImage = `url('${image.url}')`;
+        
+            imageContainer.appendChild(imageElement);
+            galleryContainer.appendChild(imageContainer);
+        }
+        else {
+            console.log(`Item with ID ${image.id} is not displayed on /en/portfolio.html`);
+        }
     });
-
+    
+    
+    
     const uniqueCategories = [...new Set(galeryimages.map(image => image.category))];
 
     uniqueCategories.forEach(category => {

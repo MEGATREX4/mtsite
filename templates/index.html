@@ -16,7 +16,7 @@
 
 <script>
     
-    if (!window.location.origin.includes('http://192.168.0.110')) {
+    if (!window.location.origin.includes('http://192.168.0.108')) {
         // Redirect to the specified URL
         window.location.href = 'https://megatrex4.netlify.app/';
     }
@@ -137,6 +137,11 @@
     <input type="text" id="texten" name="texten">
     <label for="link">URL LINK:</label>
     <input type="url" id="link" name="link">
+
+    <!-- New checkbox for "NOT show in English ver" -->
+    <label for="not_show_in_english_ver">Do not show in English ver:</label>
+    <input type="checkbox" id="not_show_in_english_ver" name="not_show_in_english_ver">
+    
     <button type="submit">Add Image</button>
 </form>
 
