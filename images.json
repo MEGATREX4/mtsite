@@ -199,7 +199,7 @@
             "showen": true,
             "id": 22,
             "url": "https://cdn.drukarnia.com.ua/645d261fc149c83ef73d7fc1/images/articles/65cbfb23ca7a99f8303a68cd/aXCX128088.50164480857.webp",
-            "category": "3dmodels",
+            "category": "article",
             "description": {
                 "desc": "Як налаштувати другу доріжку в OBS для Twich",
                 "descen": "How to set up a second track in OBS for Twich",
@@ -212,13 +212,36 @@
             "showen": true,
             "id": 23,
             "url": "https://cdn.drukarnia.com.ua/645d261fc149c83ef73d7fc1/images/articles/6527d74c3513c63578726f5a/KXTp195489.2143362812.webp",
-            "category": "3dmodels",
+            "category": "article",
             "description": {
                 "desc": "Голосування в Minecraft: чи варто зупиняти?",
                 "descen": "Voting in Minecraft: should it be stopped?",
                 "text": "Читати",
                 "texten": "Read",
                 "link": "https://drukarnia.com.ua/articles/golosuvannya-v-minecraft-chi-varto-zupinyati-7M8KD"
+            }
+        },
+        {
+            "id": 24,
+            "url": "https://cdn.drukarnia.com.ua/645d261fc149c83ef73d7fc1/images/articles/652d56ff4e72162e15ee8517/Henf252053.24991420118.webp",
+            "category": "article",
+            "showen": false,
+            "description": {
+                "desc": "Minecraft Live 2023 як це було",
+                "descen": "Minecraft Live 2023 as it was",
+                "text": "Читати",
+                "texten": "Read",
+                "link": "https://drukarnia.com.ua/articles/minecraft-live-2023-yak-ce-bulo-a6Jgd"
+            }
+        },
+        {
+            "id": 25,
+            "url": "https://i.imgur.com/sPFHfJZ.png",
+            "category": "thumbnail",
+            "showen": true,
+            "description": {
+                "desc": "Це відео про те, що TLaucnher дуже небезпечний для вас і вашого ПК ",
+                "descen": "This video was about TLaucnher being very dangerous for you and your PC "
             }
         }
     ]

@@ -5,7 +5,8 @@
         "projects": "Проєкти",
         "resourcepack": "Ресурс паки",
         "modpack": "Збірки модів",
-        "article": "Статті"
+        "article": "Статті",
+        "thumbnail": "Обкладинки"
     },
     "en": {
         "3dmodels": "3D Model",
@@ -13,6 +14,7 @@
         "projects": "Projects",
         "resourcepack": "Resourse packs",
         "modpack": "Modpacks",
-        "article": "Articles"
+        "article": "Articles",
+        "thumbnail": "Thumbnail"
     }
 }
