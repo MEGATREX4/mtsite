@@ -21,7 +21,15 @@ document.addEventListener('DOMContentLoaded', async function () {
         tabElement.classList.add('tab');
         tabElement.setAttribute('data-category', category);
         tabElement.textContent = tabName;
-        return tabElement;
+    
+        // Check if the tab should be displayed based on language
+        const shouldDisplayTab = language === 'uk' || (language === 'en' && galeryimages.some(image => image.category === category && image.showen !== true));
+    
+        if (shouldDisplayTab) {
+            return tabElement;
+        } else {
+            return null; // Return null if the tab should not be displayed
+        }
     }
 
     galeryimages.forEach(image => {
@@ -61,7 +69,11 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     uniqueCategories.forEach(category => {
         const tabName = TAB_NAMES[language][category];
-        tabsContainer.appendChild(createTab(category, tabName));
+        const tab = createTab(category, tabName);
+    
+        if (tab !== null) {
+            tabsContainer.appendChild(tab);
+        }
     });
 
     const images = document.querySelectorAll('.image');
