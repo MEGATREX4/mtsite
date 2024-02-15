@@ -225,7 +225,7 @@
             "id": 24,
             "url": "https://cdn.drukarnia.com.ua/645d261fc149c83ef73d7fc1/images/articles/652d56ff4e72162e15ee8517/Henf252053.24991420118.webp",
             "category": "article",
-            "showen": false,
+            "showen": true,
             "description": {
                 "desc": "Minecraft Live 2023 як це було",
                 "descen": "Minecraft Live 2023 as it was",
@@ -238,7 +238,6 @@
             "id": 25,
             "url": "https://i.imgur.com/sPFHfJZ.png",
             "category": "thumbnail",
-            "showen": true,
             "description": {
                 "desc": "Це відео про те, що TLaucnher дуже небезпечний для вас і вашого ПК ",
                 "descen": "This video was about TLaucnher being very dangerous for you and your PC "
