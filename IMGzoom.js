@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     galeryimages.forEach(image => {
         // Check if the element should be displayed based on language and page
-        const shouldDisplay = image.showen !== true && window.location.pathname == '/en/portfolio.html';
+        const shouldDisplay = language === 'uk' || (language === 'en' && image.showen !== true);
     
         if (shouldDisplay) {
             const imageContainer = document.createElement('div');
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             galleryContainer.appendChild(imageContainer);
         }
         else {
-            console.log(`Item with ID ${image.id} is not displayed on /en/portfolio.html`);
+            console.log(`Item with ID ${image.id} is not displayed`);
         }
     });
     
