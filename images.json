@@ -1,9 +1,29 @@
 {
     "galeryimages": [
         {
-            "id": 21,
-            "url": "https://i.imgur.com/KGy5smy.png",
-            "category": "3dmodels"
+            "id": "0",
+            "url": "https://cdn.modrinth.com/data/4MNT9XQ6/d3f23ebd92dd306e4d4c0e7c24cb730f0bd0dbab.png",
+            "category": "mods",
+            "description": {
+                "desc": "Невеликий ванільний мод, який додає кілька кольорових молотків",
+                "descen": "Little vanilla-like mod that adds some colored hammers",
+                "text": "Завантажити",
+                "texten": "Download",
+                "link": "https://modrinth.com/mod/mt-hammer"
+            }
+        },
+        {
+            "showen": true,
+            "id": "1",
+            "url": "https://cdn.drukarnia.com.ua/645d261fc149c83ef73d7fc1/images/articles/65ccc339ca7a99f8303ba652/IUng296235.76389261766.webp",
+            "category": "article",
+            "description": {
+                "desc": "Смайлики є важливим інструментом взаємодії між стрімером та глядачами, а якщо ці смайлики ще й смішні — то це крутіше у 2 рази.",
+                "descen": "Emotes are an important tool for interaction between streamers and viewers, and if they're also funny, it's 2 times cooler.",
+                "text": "Читати",
+                "texten": "Read",
+                "link": "https://megatrex4.netlify.app/tag/#7tv"
+            }
         },
         {
             "id": 2,
@@ -171,29 +191,9 @@
             }
         },
         {
-            "id": "0",
-            "url": "https://cdn.modrinth.com/data/4MNT9XQ6/d3f23ebd92dd306e4d4c0e7c24cb730f0bd0dbab.png",
-            "category": "mods",
-            "description": {
-                "desc": "Невеликий ванільний мод, який додає кілька кольорових молотків",
-                "descen": "Little vanilla-like mod that adds some colored hammers",
-                "text": "Завантажити",
-                "texten": "Download",
-                "link": "https://modrinth.com/mod/mt-hammer"
-            }
-        },
-        {
-            "showen": true,
-            "id": "1",
-            "url": "https://cdn.drukarnia.com.ua/645d261fc149c83ef73d7fc1/images/articles/65ccc339ca7a99f8303ba652/IUng296235.76389261766.webp",
-            "category": "article",
-            "description": {
-                "desc": "Смайлики є важливим інструментом взаємодії між стрімером та глядачами, а якщо ці смайлики ще й смішні — то це крутіше у 2 рази.",
-                "descen": "Emotes are an important tool for interaction between streamers and viewers, and if they're also funny, it's 2 times cooler.",
-                "text": "Читати",
-                "texten": "Read",
-                "link": "https://megatrex4.netlify.app/tag/#7tv"
-            }
+            "id": 21,
+            "url": "https://i.imgur.com/KGy5smy.png",
+            "category": "3dmodels"
         },
         {
             "showen": true,
