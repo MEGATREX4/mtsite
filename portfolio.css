@@ -1,5 +1,9 @@
 /* portfolio.css */
 
+@media (max-width: 768px) {
+
+}
+
 .gallery {
   margin-top: 15px;
   /* Adjust margin for smaller screens */

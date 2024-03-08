@@ -1,6 +1,7 @@
 @media (max-width: 768px) {
     body {
         margin: 0px !important;
+        overflow: hidden!important;
     }
 
     .header {
@@ -26,18 +27,33 @@
     }
     .footerimage{
         bottom: 0px;
-        width: 180px;
-        height: 180px;
+        width: 150px;
+        height: 150px;
     }
     .footertext {
         font-size: 10px;
     }
 
     .cont{
-        width: 100%!important;
+        width: 90%!important;
         margin: 0 50px;
     }
-
-
+    .brands{
+        left: -54px!important;
+    }
+    .rightarrowm, .leftarrow{
+        display: none!important;
+    }
+    .about{
+        max-width: 480px !important;
+        width: 380px !important;
+    }
+    .pagesbtn{
+        width: 80px!important;
+        font-size: 14px;
+    }
+    .block2{
+        width: 372px!important;
+    }
 
 }
