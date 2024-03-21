@@ -242,6 +242,19 @@
                 "desc": "Це відео про те, що TLaucnher дуже небезпечний для вас і вашого ПК ",
                 "descen": "This video was about TLaucnher being very dangerous for you and your PC "
             }
+        },
+        {
+            "id": 26,
+            "url": "https://i.imgur.com/NQOgB0t.png",
+            "category": "projects",
+            "showen": true,
+            "description": {
+                "desc": "PatsiukUI - Інтерактивний інструмент для перекладачів",
+                "descen": "PatsiukUI - Interactive tool for translators",
+                "text": "Переглянути",
+                "texten": "View",
+                "link": "https://patsiukui.netlify.app/"
+            }
         }
     ]
 }

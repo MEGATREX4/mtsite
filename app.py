@@ -109,4 +109,4 @@ def display_elements():
     return render_template('display_elements.html', tab_names=tab_names, images_data=images_data)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='192.168.0.108')
+    app.run(debug=True, host='192.168.0.101')
